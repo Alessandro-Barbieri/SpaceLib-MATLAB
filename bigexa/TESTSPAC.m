@@ -1,4 +1,4 @@
-﻿%TESTSPAC:  TEST PROGRAM FOR THE SPACELIB FUNCTIONS.
+%TESTSPAC:  TEST PROGRAM FOR THE SPACELIB FUNCTIONS.
 %
 % Vengono generati dei parametri random da introdurre nelle funzioni per testarle.
 % Questo viene fatto per le funzioni che hanno anche la funzione inversa. 
