@@ -1,9 +1,9 @@
-﻿                                 
+
 %___________________________________________________________________________
 %
 %                       HEADER FILE     SPACELIB.M (November 2005)
 %
-% this M-file defines all the constants that are used by the                
+% this M-file defines all the constants that are used by the
 % SPACELIB functions. These constants are memorized in global variables.
 %
 % HEADER FILE USAGE:
@@ -12,23 +12,23 @@
 % matlabrc.m file, all the global variables are automatically loaded
 % in memory (see user's manual).
 %
-% Typing the instruction "who global", MATLAB displays the list of the global     
+% Typing the instruction "who global", MATLAB displays the list of the global
 % variables loaded in memory.
 %
 % 2) Every function that uses the global variables, must invoke the
-% file 'spheader.m' in the first line of the code (see chapter 2.1 of the 
-% user manual). 
+% file 'spheader.m' in the first line of the code (see chapter 2.1 of the
+% user manual).
 %
 % 3) The directories containing SPACELIB are assigned to global variables
 %    and the default directory is set accordingly.
 %
-% WARNING 1: The global variables defined in this m-file 
-% have special meaning for many SPACELIB functions. 
-% Their value MUST NOT be changed for any reason. 
+% WARNING 1: The global variables defined in this m-file
+% have special meaning for many SPACELIB functions.
+% Their value MUST NOT be changed for any reason.
 %
 % WARNING 2: there is a line similar to this
 %
-%    spc_lib_dir='c:\users\spacelib_m'  % spacelib directory 
+%    spc_lib_dir='c:\users\spacelib_m'  % spacelib directory
 %
 % that MUST be updated to match your installation!!!
 %________________________________________________________________________________
@@ -38,25 +38,25 @@ clc
 
 %___________________________________________________________________________
 %
-%   		   GLOBAL VARIABLES DECLARATION: 
+%   		   GLOBAL VARIABLES DECLARATION:
 %___________________________________________________________________________
 
 spheader % declare global variables
 
 %___________________________________________________________________________
 %
-% 		GLOBAL VARIABLES INITIALIZATION: 
+% 		GLOBAL VARIABLES INITIALIZATION:
 %___________________________________________________________________________
 
 X=1;	Y=2;	Z=3;	U=4;
 
 Xaxis = [1 0 0]';
 Yaxis = [0 1 0]';
-Zaxis = [0 0 1]'; 
+Zaxis = [0 0 1]';
 
 Xaxis_n = [-1 0 0]';
 Yaxis_n = [0 -1 0]';
-Zaxis_n = [0 0 -1]'; 
+Zaxis_n = [0 0 -1]';
 
 ORIGIN=[0 0 0 1]';
 
@@ -69,7 +69,7 @@ OK=1;	NOTOK=0;
 
 PIG=pi;
 PIG_2=pi/2;
-PIG2=2*pi;	
+PIG2=2*pi;
 
 NULL3=zeros(3);
 NULL4=zeros(4);
@@ -78,7 +78,7 @@ UNIT4=eye(4);
 
 %___________________________________________________________________________
 %
-%                  GLOBAL DIRECTORIES DECLARATION: 
+%                  GLOBAL DIRECTORIES DECLARATION:
 %___________________________________________________________________________
 
 % ***-----> the following line MUST be updated to match your installation!!!
@@ -106,7 +106,7 @@ addpath(spc_lib_dir,spc_lib_dir_f,spc_lib_dir_s,spc_lib_dir_b);
 
 %___________________________________________________________________________
 %
-%                  PRINT "HEADER": 
+%                  PRINT "HEADER":
 %___________________________________________________________________________
 
 
@@ -119,9 +119,9 @@ fprintf('                  Includes general functions for vectors, matrices,\n')
 fprintf('               kinematics, dynamics, Euler angles and linear systems\n\n')
 fprintf('                  © G.LEGNANI  B.ZAPPA   R.ADAMINI 1990 - 2009\n\n')
 fprintf('           MATLAB© version with the cooperation of C.MOIOLA and D.MANARA\n')
-fprintf('            University of Brescia - Mechanical Engineering Department\n')         
-fprintf('                       Via Branze 38, 25123 BRESCIA, Italy\n')   
-fprintf('                     e-mail: giovanni. legnani @ unibs.it\n')    
+fprintf('            University of Brescia - Mechanical Engineering Department\n')
+fprintf('                       Via Branze 38, 25123 BRESCIA, Italy\n')
+fprintf('                     e-mail: giovanni. legnani @ unibs.it\n')
 fprintf('                           http://robotics.unibs.it/SpaceLib/\n\n')
 fprintf('                         SPACELIB© loaded in workspace\n')
 fprintf('\n');
