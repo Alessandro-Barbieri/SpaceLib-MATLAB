@@ -1,9 +1,9 @@
 %TESTSPAC:  TEST PROGRAM FOR THE SPACELIB FUNCTIONS.
 %
 % Vengono generati dei parametri random da introdurre nelle funzioni per testarle.
-% Questo viene fatto per le funzioni che hanno anche la funzione inversa. 
-% Applicando in sequenza, la funzione e la sua inversa, bisognerà  ritrovare 
-% ( a meno di una prefissata tolleranza) i parametri di partenza 
+% Questo viene fatto per le funzioni che hanno anche la funzione inversa.
+% Applicando in sequenza, la funzione e la sua inversa, bisognerà  ritrovare
+% ( a meno di una prefissata tolleranza) i parametri di partenza
 %
 % patched by G. Legnani November 2001
 %___________________________________________________________________________
@@ -42,9 +42,9 @@ if (t==1)
 		k=round(3*rand(1,1));
 	end
 
-	M=cardatom(q,i,j,k,O); 
+	M=cardatom(q,i,j,k,O);
         fprintm(out,'The position matrix obtained with function CARDATOM is:',M)
-	
+
 	[q1 q2]=mtocarda(M,i,j,k);
         fprintf(out,'\n\nThe screw parameters evaluated with function MTOCARDA are:')
         fprintm(out,' ',q1)
@@ -62,7 +62,7 @@ if (t==1)
 
 end % if t==1
 
-if (contatore==10)&(t==1) 
+if (contatore==10)&(t==1)
 	disp('**** OK: test successful **** Le  funzioni  CARDATOM  e MTOCARDA hanno superato correttamente i test  ****')
         fprintf(out,'\n\n**** OK: test successful **** Le  funzioni  CARDATOM  e MTOCARDA hanno superato correttamente i test  ****\n\n')
 end
@@ -78,14 +78,14 @@ if (t==2)
         k=round(1+2*rand(1,1));
         fprintf(out,'\nTest n°:%d\n',contatore)
         fprintm(out,'The input screw parameters are: q =',q)
-	
+
 	while (i<1)|(j<1)|(k<1)|(i==j)|(j==k)
                 i=round(1+2*rand(1,1));
                 j=round(1+2*rand(1,1));
                 k=round(1+2*rand(1,1));
 	end
 
-        R=cardator(q,i,j,k); 
+        R=cardator(q,i,j,k);
         fprintm(out,'The rotation matrix obtained with function CARDATOR is:',R)
 	[q1 q2]=rtocarda(R,i,j,k);
         fprintf(out,'The screw parameters evaluated with function RTOCARDA are:')
@@ -100,11 +100,11 @@ if (t==2)
                 q1
                 q2
                 fprintf(out,'***  ERROR IN CARDATOR OR RTOCARDA  ***')
-	end	
+	end
 
 end % if t==2
 
-if (contatore==10)&(t==2) 
+if (contatore==10)&(t==2)
 	disp('**** OK: test successful **** Le  funzioni  CARDATOR  e RTOCARDA hanno superato correttamente i test  ****')
         fprintf(out,'\n\n**** OK: test successful **** Le  funzioni  CARDATOR  e RTOCARDA hanno superato correttamente i test  ****\n\n')
 end
@@ -151,29 +151,29 @@ if (t==8)
           error(' SCREWTOM P1(U)~=1');
         end
 	if ((errore1)>10e-4)
-		u1 
+		u1
 		u
 		contatore
                 fprintf(out,'*** ERROR IN SCREWTOM OR MTOSCREW: The axis u...  ***')
 	end
 
 	if (errore2)>10e-4
-		fi1 
-		phi 
+		fi1
+		phi
 		contatore
                 fprintf(out,'*** ERROR IN SCREWTOM OR MTOSCREW: Angle phi...  ***')
 		error('*** ERROR IN SCREWTOM OR MTOSCREW: Angle phi...  ***')
 	end
 
 	if (errore3)>10e-4
-		h 
-		h1 
+		h
+		h1
 		contatore
 		error('*** ERROR IN SCREWTOM OR MTOSCREW: Screw displacement h...  ***')
 	end
 
         if (errore4)>10e-4  % by Joe
-                P 
+                P
                 P1
                 unitv(vect(P,P1))
                 u1
@@ -183,7 +183,7 @@ if (t==8)
 
 end % if t==8
 
-if (contatore==10)&(t==8) 
+if (contatore==10)&(t==8)
 	disp('**** OK: test successful **** Le  funzioni  SCREWTOM e MTOSCREW hanno superato correttamente i test  ****')
         fprintf(out,'\n\n**** OK: test successful **** Le  funzioni  SCREWTOM e MTOSCREW hanno superato correttamente i test  ****\n\n')
 end
@@ -229,7 +229,7 @@ fprintf(out,' to the evaluated direction by the function plane2\n');
 	end
 end % if t==4
 
-if (contatore==10)&(t==4) 
+if (contatore==10)&(t==4)
 	disp('**** OK: test successful **** Le  funzioni  PLANE e PLANE2 hanno superato correttamente i test  ****')
         fprintf(out,'\n\n**** OK: test successful **** Le  funzioni  PLANE e PLANE2 hanno superato correttamente i test  ****\n\n')
 end
@@ -262,15 +262,15 @@ if (t==5)
         errore2=modulus(sign*fi1-phi);
 
 	if ((errore1)>10e-4)
-		u1 
+		u1
 		u
 		contatore
 		error('*** ERROR IN EXTRACT OR ROTAT: The axis u...  ***')
 	end
 
 	if (errore2)>10e-4
-		fi1 
-		phi 
+		fi1
+		phi
 		contatore
 		error('*** ERROR IN EXTRACT OR ROTAT: Angle phi...  ***')
 	end
@@ -278,7 +278,7 @@ if (t==5)
 
 end % if t==4
 
-if (contatore==10)&(t==5) 
+if (contatore==10)&(t==5)
 	disp('**** OK: test successful **** Le  funzioni  EXTRACT e ROTAT hanno superato correttamente i test  ****')
         fprintf(out,'\n\n**** OK: test successful **** Le  funzioni  EXTRACT e ROTAT hanno superato correttamente i test  ****\n\n')
 end
@@ -301,7 +301,7 @@ if (t==3)
                 k=round(1+2*rand(1,1));
 	end
 
-	M=cardatom(q,i,j,k,O); 
+	M=cardatom(q,i,j,k,O);
 	W=cardatow(q,qqp,i,j,k,O);
 	H=cardatoh(q,qqp,qpp,i,j,k,O);
         fprintf(out,'\nTest nø:%d\n',contatore)
@@ -323,23 +323,23 @@ if (t==3)
 
 	errore1=modulus(q1-q);		errore3=modulus(qp1-qqp);	errore5=modulus(qpp1-qpp);
 	errore2=modulus(q2-q);		errore4=modulus(qp2-qqp);	errore6=modulus(qpp2-qpp);
-			
+
 	if (errore1>10e-5)&(errore2>10e-5)
-		q1		
+		q1
 		q2
 		q
 		error('*** ERROR IN EXTRACT OR ROTAT: q  ***')
 	end
 
 	if (errore3>10e-5)&(errore4>10e-5)
-		qp1		
+		qp1
 		qp2
 		qqp
 		error('*** ERROR IN HTOCARDA  OR CARDATOH: qp  ***')
 	end
 
 	if (errore5>10e-5)&(errore6>10e-5)
-		qpp1		
+		qpp1
 		qpp2
 		qpp
 		error('*** ERROR IN HTOCARDA  OR CARDATOH: qpp  ***')
@@ -349,7 +349,7 @@ if (t==3)
 
 end % if t==3
 
-if (contatore==10)&(t==3) 
+if (contatore==10)&(t==3)
 	disp('**** OK: test successful **** Le  funzioni  HTOCARDA  e CARDATOH hanno superato correttamente i test  ****')
         fprintf(out,'\n\n**** OK: test successful **** Le  funzioni  HTOCARDA  e CARDATOH hanno superato correttamente i test  ****\n\n')
 end
@@ -384,22 +384,22 @@ if (t==6)
         errore2=modulus(sign*fi1-phi);
 
 	if ((errore1)>10e-4)
-		uu 
+		uu
 		u1
 		contatore
 		error('*** ERROR IN EXTRACT OR ROTAT2: axis u  ***')
 	end
 
 	if (errore2)>10e-4
-		fi1 
-		phi 
+		fi1
+		phi
 		contatore
 		error('*** ERROR IN EXTRACT OR ROTAT2: Angle phi  ***')
 	end
 
 end % if t==6
 
-if (contatore==10)&(t==6) 
+if (contatore==10)&(t==6)
 	disp('**** OK: test successful **** Le  funzioni  EXTRACT e ROTAT2 hanno superato correttamente i test  ****')
         fprintf(out,'\n\n**** OK: test successful **** Le  funzioni  EXTRACT e ROTAT2 hanno superato correttamente i test  ****\n\n')
 end
@@ -413,7 +413,7 @@ if (t==7)
 
         phi=jrand(1,1,-pi,pi);
 	u=round(2*rand(1,1))+1; % Generi l'asse X,Y,Z, or U
-        uu=[0 0 0 ]'; 
+        uu=[0 0 0 ]';
 	uu(u)=1;
         O=jrand(3,1,-10,10);
 	O(U)=1;
@@ -445,15 +445,15 @@ if (t==7)
 	end
 
 	if (errore2)>10e-4
-		fi1 
-		phi 
+		fi1
+		phi
 		contatore
 		error('*** ERROR IN EXTRACT OR ROTAT24: Angle phi...  ***')
 	end
 
 end % if t==7
 
-if (contatore==10)&(t==7) 
+if (contatore==10)&(t==7)
 	disp('**** OK: test successful **** Le  funzioni  EXTRACT e ROTAT24 hanno superato correttamente i test  ****')
         fprintf(out,'\n\n**** OK: test successful **** Le  funzioni  EXTRACT e ROTAT24 hanno superato correttamente i test  ****\n\n')
 end
@@ -473,32 +473,32 @@ fprintf(out,'TEST FUNCTION INTER2PL\n');
 		if (par1==X)
 				pl1(X)=1; pl1(Y)=0; pl1(Z)=0;
 				%break;
-		end	
+		end
 		if (par1==Y)
 				pl1(X)=0; pl1(Y)=1; pl1(Z)=0;
 				%break;
-		end	
+		end
 		if (par1==Z)
 				pl1(X)=0; pl1(Y)=0; pl1(Z)=1;
 				%break;
-		end	
+		end
 		pl1(U)=1000*rand(1);
 
 		par2=round(U*rand(1));
-		
+
 
 		if (par2==X)
 				pl2(X)=1; pl2(Y)=0; pl2(Z)=0;
 				%break;
-		end	
+		end
 		if (par2==Y)
 				pl2(X)=0; pl2(Y)=1; pl2(Z)=0;
 				%break;
-		end	
+		end
 		if (par2==Z)
 				pl2(X)=0; pl2(Y)=0; pl2(Z)=1;
 				%break;
-		end	
+		end
 		pl2(U)=1000*rand(1);
 
 
@@ -518,7 +518,7 @@ fprintf(out,'TEST FUNCTION INTER2PL\n');
                         fprintm(out,'The direction of intersection line is :',(l(:,Y))');
 		end
 end %for
-if (contatore==10)&(t==9) 
+if (contatore==10)&(t==9)
 	disp('**** La  funzione  INTER2PL ha superato correttamente i test  ****')
         fprintf(out,'\n\n**** La  funzione  INTER2PL ha superato correttamente i test  ****')
 end
@@ -552,7 +552,7 @@ if (t==10)
 		fprintm(out,' The product At/((At)*A) is : ',B);
 	end
 end %chiude if t==10
-if (contatore==10)&(t==10) 
+if (contatore==10)&(t==10)
 	disp('**** La  funzione  PSEUDINV ha superato correttamente i test  ****')
         fprintf(out,'\n\n**** La  funzione  PSEUDINV ha superato correttamente i test  ****')
 end
@@ -587,7 +587,7 @@ for numtent=1:1:2
 	end
 
 	P1(U)=1; P2(U)=1;
-		
+
 	fprintf(out,'\n\n Test N° %d\n',numtent);
 
 	fprintm(out,'First  point is :',P1');
@@ -603,13 +603,13 @@ for numtent=1:1:2
 	fprintm(out,'The Direction of the line built with LINPVECT is :',(l2(1:3,Y))');
 
 
-	if modulus(l2-l1)>0.001 
+	if modulus(l2-l1)>0.001
 		error('*** ERROR IN  LINE2P e LINPVECT ***')
 	end
 end
 
 end %chiude if t==11
-if (contatore==10)&(t==11) 
+if (contatore==10)&(t==11)
 	disp('**** OK: test successful **** Le funzioni LINE2P e LINPVECT hanno superato correttamente i test  ****')
 	fprintf(out,'\n\n**** OK: test successful **** Le funzioni  LINE2P e LINPVECT hanno superato correttamente i test  ****')
 end
