@@ -4,10 +4,10 @@ function R=rotat2(a,phi)
 %ROTAT2 (Spacelib): Build a rotation matrix.
 %
 % Rotation around a frame axis.
-% This function builds a 3*3 rotation matrix R describing a rotation of angle 
+% This function builds a 3×3 rotation matrix R describing a rotation of angle 
 % 'phi', around axis 'a'. Axis 'a' must be the constant X, Y, Z, U.
-% The rotation  matrix  is  stored  in  the 3*3 matrix R.
-% If a=U, the rotation is assumed null (3*3 identity matrix generated).
+% The rotation  matrix  is  stored  in  the 3×3 matrix R.
+% If a=U, the rotation is assumed null (3×3 identity matrix generated).
 % Usage:
 %
 %                       A=rotat2(a,phi)
@@ -26,7 +26,7 @@ end
 
 % Only translation
 if (a==U) 
-	R=eye(3);  % Unit matrix 3*3 
+	R=eye(3);  % Unit matrix 3×3 
 
 else 
 	x=rem(a,3)+1;	y=rem(a+1,3)+1;	z=a;

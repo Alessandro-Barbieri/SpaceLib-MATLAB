@@ -19,13 +19,13 @@ function P3=intermediate(P1,a,P2,b)
 % Related functions: MIDDLE
 %
 % © G.Legnani, C. Moiola 1998; adapted from: D.Amadori - G.Pugliese - Ghislotti
-% bug fixed by g.legnani October 2003
-% bug fixed by d.manara January 2005
+% bug fixed by G.Legnani October 2003
+% bug fixed by D.Manara January 2005
 %___________________________________________________________________________
 
 
-% by g.legnani October 2003
-% by d.manara January 2005
+% by G.Legnani October 2003
+% by D.Manara January 2005
 c=a+b;
 if (c=0)
    fprintf(1,'intermediate: wrong weights');
@@ -33,6 +33,6 @@ if (c=0)
 end
 P3=(a*P1+b*P2)/c;
 
-% Homogeneus coordinates
+% Homogeneous coordinates
 P3(U)=1;
 

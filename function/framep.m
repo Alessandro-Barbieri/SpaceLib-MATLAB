@@ -13,7 +13,7 @@ function R=framep(P1,P2,P3,a1,a2)
 % Axis a2 is directed as Axis a3 x Axis a1.
 % a1 and a2 (the axes)  must  be  either the constants X, Y or Z, defined in  
 % spacelib.m. a1 must be different from a2. The rotation matrix is stored in 
-% the 3*3 matrix A.
+% the 3×3 matrix A.
 % Usage:
 %
 %                       A=framep(P1,P2,P3,a1,a2)

@@ -16,12 +16,12 @@ function [I,d]=project(P,pl)
 % Usage:
 %		 [I,dist]=project(P,pl)
 %
-% patch g.legnani January 2004
+% patch G.Legnani January 2004
 %___________________________________________________________________________
  
 spheader
 
-% Homogeneus Coordinates
+% Homogeneous Coordinates
 d=dot(P,pl');
 I(1:3)=P(1:3)-d*pl(1:3)';
 I(U)=P(U);

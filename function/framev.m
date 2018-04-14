@@ -10,7 +10,7 @@ function R=framev(V1,V2,a1,a2)
 % The third axis is directed as V1xV2. The second axis is directed  as a3*a1
 % Axes a1 and a2 must be either the constants X,Y or Z,defined in spacelib.m. 
 % a1 must be different from a2. 
-% The rotation matrix is stored in the 3*3 matrix A.
+% The rotation matrix is stored in the 3×3 matrix A.
 % Usage:
 %
 %                       A=framev(V1,V2,a1,a2)

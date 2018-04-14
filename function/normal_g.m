@@ -1,12 +1,12 @@
 function rn=normal_s(r1)
 
-%NORMAL_S (Spacelib): normalize (orthogonalise) any square matrix.
+%NORMAL_S (Spacelib): normalize (orthogonalize) any square matrix.
 %
 % Transforms any square matrix A in the orthogonal matrix An most similar to the original one 
 %
 % 			An=normal_g(A)
 %
-% NOTE: a  square  matrix  is  ortogonal  if  its transpose and its inverse coincide
+% NOTE: a  square  matrix  is  orthogonal  if  its transpose and its inverse coincide
 %
 % © G.Legnani 2004
 %___________________________________________________________________________

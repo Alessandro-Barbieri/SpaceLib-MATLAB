@@ -1,17 +1,17 @@
 function rn=normal3(r1)
 
-%NORMAL3 (Spacelib): normalize (orthogonalise) a 3*3 matrix.
+%NORMAL3 (Spacelib): normalize (orthogonalize) a 3×3 matrix.
 %
-% Makes ortogonal  a 3*3 matrix  
+% Makes orthogonal  a 3×3 matrix  
 %
 % 			Rn=normal(R)
 %
-% NOTE: a  square  matrix  is  ortogonal  if  its transpose and its inverse coincide
+% NOTE: a  square  matrix  is  orthogonal  if  its transpose and its inverse coincide
 %
 % © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
 %___________________________________________________________________________
 
-%NORMAL3 (Spacelib): transform a 3*3 matrix into the 'most similar' orthogonal matrix.
+%NORMAL3 (Spacelib): transform a 3×3 matrix into the 'most similar' orthogonal matrix.
 s=size(r1);
 if(s(1)~=3 | s(2)~=3)
    fprintf(1,'NORMAL3: bad matrix size (should be [3 3] but it is [%d %d])',s(1),s(2));

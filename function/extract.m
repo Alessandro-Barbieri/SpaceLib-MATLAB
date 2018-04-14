@@ -4,7 +4,7 @@ function [u,phi]=extract(r)
 %
 %
 % Extracts the  unit  vector  u of the screw axis and the rotation angle phi 
-% from a rotation matrix stored in the 3*3 left-upper submatrix of a matrix R.  
+% from a rotation matrix stored in the 3×3 left-upper submatrix of a matrix R.  
 % EXTRACT performs the inverse operation of ROTAT.
 % Related functions: MTOSCREW, SCREWTOM, ROTAT
 % Usage:

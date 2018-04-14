@@ -23,7 +23,7 @@ v32=vect(P3,P2);
 pl=cross(v12,v32);
 
 pl=unitv(pl)';  %% plane is a row
-% Homogeneus Coordinates
+% Homogeneous Coordinates
 pl(U)=-dot3(P2(1:3),pl);
 
 

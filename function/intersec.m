@@ -32,7 +32,7 @@ function [lmindist,mindist,pl,I,inttype]=intersec(l1,l2)
 %
 % © G.Legnani, C. Moiola 1998; adapted from: AMADORI,GHISLOTTI, PUGLIESE 1997
 % patched by G. Legnani November 2001
-% patched on January 2003 by g.Legnani
+% patched on January 2003 by G.Legnani
 %           (call to function 'dist' replaced to 'distp
 %            for compatibility with new MATLAB releases)
 %_____________________________________________________________________________
@@ -66,23 +66,23 @@ if (abs(u3(X)) > zero | abs(u3(Y)) > zero | abs(u3(Z)) > zero)
 
 		I=middle(A,B);                % middle point between A and B  
 		lmindist(:,X)=I;              % origin of minimum distance line  
-		lmindist(:,Y)=u3;             % u3 is the dir. of this line  
+		lmindist(:,Y)=u3;             % u3 is the direction of this line  
 		lmindist(:,Y)=unitv(lmindist(:,Y));
 		pl=plane2(I,u3);              % builds the minimum distance pl.  
 		if ( mindist > zero )         % l1 and l2 are oblique lines  
-			intype=1;             % intersesction is middle point
+			intype=1;             % intersection is middle point
 		else			      % l1 and l2 are incident lines
 			mindist=0;
 			inttype=0;            % I is the real intersection
 		end
 else                                          % l1 is parallel to l2
 		v1=cross(deltap,l1(:,Y));
-		mindist = modulus(v1);	      %  min. dist. between l1, l2
+		mindist = modulus(v1);	      %  minimum distance between l1, l2
 		if ( mindist < zero)          % l1==l2
 			inttype = -1;
 		else 			      % l1!=l2
 			inttype = 2; 	      % no intersection between l1, l2
-			v1=cross(deltap,l1(:,Y)); % dir. of min. dist. line
+			v1=cross(deltap,l1(:,Y)); % direction of minimum distance line
 			v2=cross(v1,l1(:,Y));
 			lmindist(:,Y)=unitv(v2);
 			lmindist(:,X)=l1(:,X);

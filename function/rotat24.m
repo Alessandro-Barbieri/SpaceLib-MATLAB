@@ -7,7 +7,7 @@ function m=rotat24(a,phi,O)
 % in point 'O' and rotated of angle 'phi' around axis 'a'. 
 % - O : homogeneous coordinates of origin.
 % - a : must be the constant X, Y, Z, U.
-% If a=U, the rotation is assumed null (3*3 identity matrix generated).
+% If a=U, the rotation is assumed null (3×3 identity matrix generated).
 % Usage:
 %
 % 			m=rotat24(a,phi,O)

@@ -1,5 +1,5 @@
 function a=adj3(r)
-%ADJ (Spacelib): adjointed of a 3*3 matrix (the inverse is 1/det*adj(matrix))
+%ADJ (Spacelib): adjointed of a 3×3 matrix (the inverse is 1/det*adj(matrix))
 s=size(r);
 if(s(1)~=3 | s(2)~=3)
    disp('ADJ3: bad matrix size (should be [3 3])');

@@ -4,7 +4,7 @@ function v=mtov(M)
 %MTOV (Spacelib): Extracts  a column vector v from a matrix A.
 %
 % Matrix to vector.
-% Extracts  a column vector v from the 3*3 left-upper skew-symmetric submatrix 
+% Extracts  a column vector v from the 3×3 left-upper skew-symmetric submatrix 
 % of a matrix M.
 % MOTV performs the inverse operation then VTOM.
 %

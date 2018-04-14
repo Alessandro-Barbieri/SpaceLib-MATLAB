@@ -5,7 +5,7 @@ function A=vtom(v)
 %
 % Vector to matrix.
 %
-% Creates a 3*3 skew-symmetric sub-matrix from a vector v and stores it in
+% Creates a 3×3 skew-symmetric sub-matrix from a vector v and stores it in
 % matrix A. 
 % VTOM performs the inverse operation then MTOV.
 % Usage:
