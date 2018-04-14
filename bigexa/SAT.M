@@ -1,14 +1,14 @@
-
+﻿
 %___________________________________________________________________________
 %
 %				SAT.M
 %
 % Solution of  the  application example SAT described in the SPACELIB user's
 % manual (page 113). This  program   evaluate   the   parameters   of   the 
-% rototraslation  necessary  to  orientate  an  antenna  mounted  on a space 
+% rototranslation  necessary  to  orientate  an  antenna  mounted  on a space 
 % satellite.
 %
-% (c) G.Legnani 1998 adapted from (c) G.Legnani and R.Faglia 1990
+% © G.Legnani 1998 adapted from © G.Legnani and R.Faglia 1990
 %___________________________________________________________________________
 
 
@@ -41,16 +41,16 @@ Q5=screwtom(u5,rad(26),P2,0);
 % Final Configuration
 mf=Q5*m4;
 
-% Rototraslation 
+% Rototranslation 
 miinv=invers(mi);
 Qtot=mf*miinv;
-[utot,fi,P,h]=mtoscrew(Qtot);
+[utot,phi,P,h]=mtoscrew(Qtot);
 
 clc
 
 % ----- PRINT OUTPUT RESULTS
 fprintf(1,'\n\n--------------------------      Results      ------------------------------\n');
-printm('The rototraslation axis u is :       ',utot);
-fprintf(1,'\n The rotation angle along axis u is:    %3.3f� [deg]    %2.3f [rad]',deg(fi),fi)
-fprintf(1,'\n\n The traslation along the axis u is :   %3.3f\n', h)
+printm('The rototranslation axis u is :       ',utot);
+fprintf(1,'\n The rotation angle along axis u is:    %3.3f° [deg]    %2.3f [rad]',deg(phi),phi)
+fprintf(1,'\n\n The translation along the axis u is :   %3.3f\n', h)
 printm('The point P of the axis is:       ',P)  

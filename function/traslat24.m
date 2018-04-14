@@ -13,7 +13,7 @@ function M=traslat24(a,h,P)
 % Usage:
 %			M=traslat24(a,h,P)
 %
-% (c) G.Legnani, D.Manara 2005
+% © G.Legnani, D.Manara 2005
 %___________________________________________________________________________
 
 spheader

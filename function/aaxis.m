@@ -8,7 +8,7 @@ function u=aaxis(a)
 %			u=aaxis(a)
 %
 %
-% (c) G.Legnani, D.Manara 2005
+% © G.Legnani, D.Manara 2005
 %___________________________________________________________________________
 
 spheader;

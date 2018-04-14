@@ -16,7 +16,7 @@ function [I,d]=project(P,pl)
 % Usage:
 %		 [I,dist]=project(P,pl)
 %
-% patch g.legnani january 2004
+% patch g.legnani January 2004
 %___________________________________________________________________________
  
 spheader

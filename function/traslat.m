@@ -11,7 +11,7 @@ function M=traslat(u,h)
 %			M=traslat(u,h)
 %
 %
-% (c) G.Legnani, D.Manara 2005
+% © G.Legnani, D.Manara 2005
 %___________________________________________________________________________
 
 spheader

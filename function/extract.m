@@ -1,17 +1,17 @@
-function [u,fi]=extract(r)
+function [u,phi]=extract(r)
 
 %EXTRACT (Spacelib): Extracts unit vector and rotation angle from a rotation matrix.
 %
 %
-% Extracts the  unit  vector  u of the screw axis and the rotation angle fi 
+% Extracts the  unit  vector  u of the screw axis and the rotation angle phi 
 % from a rotation matrix stored in the 3*3 left-upper submatrix of a matrix R.  
 % EXTRACT performs the inverse operation of ROTAT.
 % Related functions: MTOSCREW, SCREWTOM, ROTAT
 % Usage:
-%			[u,fi]=extract(R)
+%			[u,phi]=extract(R)
 %
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
 % patched by g.legnani November 2001
 %___________________________________________________________________________
  
@@ -24,7 +24,7 @@ c=0.5*(r(Y,X)-r(X,Y));
 s=sqrt(a^2+b^2+c^2);
 co=0.5*(r(X,X)+r(Y,Y)+r(Z,Z)-1);
 
-fi=atan2(s,co);
+phi=atan2(s,co);
 
 co=min(1,max(-1,co)); 
 v=1-co;
@@ -33,12 +33,12 @@ if (modulus(s)>0.1)
 	u(X)=a/s;
 	u(Y)=b/s;
 	u(Z)=c/s;
-elseif ( (fi~=0) & (co>0) )
+elseif ( (phi~=0) & (co>0) )
 	t=1/v;
 	u(X)=sign(r(3,2)-r(2,3))*sqrt( abs((r(1,1)-co)*t));
 	u(Y)=sign(r(1,3)-r(3,1))*sqrt( abs((r(2,2)-co)*t));
 	u(Z)=sign(r(2,1)-r(1,2))*sqrt( abs((r(3,3)-co)*t));
-elseif ( (fi~=0) & (co<0) )
+elseif ( (phi~=0) & (co<0) )
 	t=1/v;
 	u(X)=sqrt( abs((r(1,1)-co)*t));
 	u(Y)=sqrt( abs((r(2,2)-co)*t));
@@ -63,6 +63,6 @@ elseif ( (fi~=0) & (co<0) )
 	u(z)=u(z)*sign(r(z,x)+r(x,z))*s;
 
 else
-  u=[0 0 0 ];    % rotation axis is undefined (fi==0)
+  u=[0 0 0 ];    % rotation axis is undefined (phi==0)
 end
 

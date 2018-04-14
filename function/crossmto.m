@@ -12,7 +12,7 @@ function C=crossmto(A1,A2)
 %
 %			c=crossmtom(A1,A2)
 %
-% bug fixed g. legnani january 2003
+% bug fixed G. Legnani January 2003
 %___________________________________________________________________________
 
 C=A2'*A1-A1'*A2;

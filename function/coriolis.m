@@ -12,7 +12,7 @@ function H=coriolis(H0,H1,W0,W1)
 %
 %			H=coriolis(H0,H1,W0,W1)
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
 %___________________________________________________________________________
 
 H=H0+H1+2*W0*W1;

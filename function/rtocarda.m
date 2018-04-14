@@ -15,7 +15,7 @@ function [a,b]=rtocarda(R,i,j,k)
 %
 % Related functions : MTOCARDA 
 % 		 
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Adamini 1993
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Adamini 1993
 %___________________________________________________________________________
 
 
@@ -25,8 +25,8 @@ if ( i<X | i>Z | j<X | j>Z | k<X | k>Z | i==j | j==k )
 	error('Error in RTOCARDA: Illegal rotation axis ')
 end
 
-if (rem(j-i+3,3)==1)	sig=1;   % ciclic 
-	else            sig=-1;  % anti ciclic
+if (rem(j-i+3,3)==1)	sig=1;   % cyclic 
+	else            sig=-1;  % anti cyclic
 end
 
 if (i~=k)  % Cardanic Convention

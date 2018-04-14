@@ -1,27 +1,27 @@
 
-function M=screwtom(u,fi,p,h)
+function M=screwtom(u,phi,p,h)
 
 %___________________________________________________________________________
 %
 % SCREWTOM
 %
 % Screw to matrix. 
-% Builds the rototraslation matrix Q from the axis of the screw displacement 
-% u, the rotation angle fi, the traslation h along u and the coordinates  of 
+% Builds the rototranslation matrix Q from the axis of the screw displacement 
+% u, the rotation angle phi, the translation h along u and the coordinates  of 
 % a point P of the axis.
 % SCREWTOM performs the inverse operation than MTOSCREW.
 % Usage:
 %
-%			M=screwtom(u,fi,p,h)
+%			M=screwtom(u,phi,p,h)
 %
 % Related functions: EXTRACT, ROTAT.
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
 %___________________________________________________________________________
 
 header
 
-M=rotat(u,fi,4); 
+M=rotat(u,phi,4); 
 
 u(U)=0;
 

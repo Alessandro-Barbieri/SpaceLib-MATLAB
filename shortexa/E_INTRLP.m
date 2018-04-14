@@ -15,7 +15,7 @@ l(:,Y)=dir;
 %P'
 %P1'
 %d=-dist(P,P1);
-d=-distp(P,P1);   %patch by g.legnani - january 2003
+d=-distp(P,P1);   %patch by g.legnani - January 2003
                   %for compatibility with new spacelib versions
 v=vector(dir,d);
 v(U)=0;
@@ -24,7 +24,7 @@ Ps=P1+v;
 Ps(U)=1;
 printm('The point P is :',Ps)
 %ddd=dist(Ps,P)
-ddd=distp(Ps,P);   %patch by g.legnani - january 2003
+ddd=distp(Ps,P);   %patch by g.legnani - January 2003
                    %for compatibility with new spacelib versions
 printm('The distance between P and Ps is',ddd); 
 printm('The vector Ps-P is',vect(Ps,P));

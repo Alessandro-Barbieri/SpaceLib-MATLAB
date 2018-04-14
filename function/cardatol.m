@@ -16,7 +16,7 @@ function R=cardatol(q,i,j,k)
 %
 % Related functions: CARDTOOM, CARDOMPT, HTOCARDA.
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Adamini 1993
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Adamini 1993
 %___________________________________________________________________________
 
 spheader
@@ -32,8 +32,8 @@ if ( i<X | i>Z | j<X | j>Z | k<X | k>Z | i==j | j==k )
 	error('	**** 	Spacelib Error: Illegal rotation axis	****');
 end
 
-if ( rem(j-i+3,3)==1 )	sig=1;  % ciclic 
-	else 	        sig=-1;	% anticiclic
+if ( rem(j-i+3,3)==1 )	sig=1;  % cyclic 
+	else 	        sig=-1;	% anticyclic
 end
 
 

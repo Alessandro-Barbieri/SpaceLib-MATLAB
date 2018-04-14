@@ -16,9 +16,9 @@ function [I,d]=projponl(l,P1)
 %
 %			[I,dist]=projponl(l,P1)
 %
-% patched on january 2003 by g.Legnani
+% patched on January 2003 by g.Legnani
 %           (call to function 'dist' replaced to 'distp
-%            for compatibility with new matlab releases)
+%            for compatibility with new MATLAB releases)
 %___________________________________________________________________________
 
 spheader
@@ -26,6 +26,6 @@ spheader
 pl=plane2(P1,l(:,Y)); 		% builds plane pl 
 
 [I,d]=project(l(:,X),pl);    % finds I
-d=distp(P1,I);  % patch january 2003 for compatibility with the new matlab versions
+d=distp(P1,I);  % patch January 2003 for compatibility with the new MATLAB versions
                 % (avoid name conflicts)
 

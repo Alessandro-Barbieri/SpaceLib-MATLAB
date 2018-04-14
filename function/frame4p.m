@@ -1,9 +1,9 @@
 
-function M=frame4P(P1,P2,P3,a1,a2)
+function M=frame4p(P1,P2,P3,a1,a2)
 
 %FRAME4P (Spacelib): Frames from three points.
 %
-% Builds  a  4*4 position  matrix  m describing  the  position and orientation
+% Builds  a  4×4 position  matrix  m describing  the  position and orientation
 % of a frame attached from three points.
 % The origin  is in P1, axis a1 points from P1 toward point P2, axis a2 from 
 % P1 toward point P3 (if possible). Axis a1 has priority on a2.
@@ -19,7 +19,7 @@ function M=frame4P(P1,P2,P3,a1,a2)
 %
 % Related functions: FRAMEP
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Adamini 1993
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Adamini 1993
 %___________________________________________________________________________
 
 
@@ -27,7 +27,7 @@ spheader
 
 M=framep(P1(1:3),P2(1:3),P3(1:3),a1,a2);
 
-P1(U)=1; % Homogeneus coordinates
+P1(U)=1; % Homogeneous coordinates
 
 M(1:4,U)=P1(1:4);
 

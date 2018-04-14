@@ -4,7 +4,7 @@
 spheader
 
 u= Zaxis_n;
-fi=PIG_2;
-A= rotat(u,fi);
+phi=PIG_2;
+A= rotat(u,phi);
 
 printm('The rotation matrix is:',A)

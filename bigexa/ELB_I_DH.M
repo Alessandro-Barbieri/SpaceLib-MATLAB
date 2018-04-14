@@ -5,43 +5,43 @@
 % is compatible with the input  of elb_d_dh.m The input  of this program is compatible with the
 % output of elb_d_dh.m
 %   Input file:   ELBOW.DAT GRIPPER.MOT GUESS.1ST                       Output file:  JOINT.MOT
-% (c) G. Legnani, C. Moiola 1998
+% © G. Legnani, C. Moiola 1998
 %_______________________________________________________________________________________________
 
 clear
 spheader
 MAXLINK=6;
-theta= zeros(1,MAXLINK+1);                                  % Denavit & Hartemberg's parameters
+theta= zeros(1,MAXLINK+1);                                  % Denavit & Hartenberg's parameters
 d    = zeros(1,MAXLINK+1);
 b    = zeros(1,MAXLINK+1);
-fi   = [0 PIG_2 0 0 3*PIG_2 PIG_2 0];
+phi   = [0 PIG_2 0 0 3*PIG_2 PIG_2 0];
 a    = zeros(1,MAXLINK+1);
 q    = zeros(1,MAXLINK);                                    % joint angles
-qp   = zeros(1,MAXLINK);                                    % array of joint vel. variables
-qpp  = zeros(1,MAXLINK);                                    % array of jint acc. variables
-%ds   = zeros(1,MAXLINK);                                   % sol. of the eq. J*dq=ds
-dq   = zeros(1,MAXLINK);                                    % sol. of Newton/Raphson alg. step
+qp   = zeros(1,MAXLINK);                                    % array of joint velocity variables
+qpp  = zeros(1,MAXLINK);                                    % array of joint acceleration variables
+%ds   = zeros(1,MAXLINK);                                   % solution of the equation J*dq=ds
+dq   = zeros(1,MAXLINK);                                    % solution of Newton/Raphson algorithm step
 buf  = zeros(1,MAXLINK);
 toll=0.0005;                                                % precision of the solution
-maxiter=15;                                                 % max. num. of iter. in N-R alg.
+maxiter=15;                                                 % maximum number of iter. in N-R algorithm
 orig=ORIGIN;
-mrelp_1=zeros(4,4*(MAXLINK+1));    % array containing pos. mat. of frame(p) seen in frame (p-1)
-Wrelp_1=zeros(4,4*(MAXLINK+1));  %array containing rel.vel.mat.of frame (p) seen in frame (p-1)
-Hrelp_1=zeros(4,4*(MAXLINK+1));  %array containing rel.acc.mat.of frame (p) seen in frame (p-1)
-mabs=zeros(4,4*(MAXLINK+1));       % array containing abs. pos. mat. of frame (p) in base frame
-Wabs=zeros(4,4*(MAXLINK+1));       % array containing abs. vel. mat. of frame (i) in base frame
-Habs=zeros(4,4*(MAXLINK+1));       % array containing abs. acc. mat. of frame (i) in base frame
-mabsinv=NULL4;    % invers position matrix of the frame positioned in the center of the gripper
+mrelp_1=zeros(4,4*(MAXLINK+1));    % array containing position matrix of frame(p) seen in frame (p-1)
+Wrelp_1=zeros(4,4*(MAXLINK+1));  %array containing rel velocity matrix of frame (p) seen in frame (p-1)
+Hrelp_1=zeros(4,4*(MAXLINK+1));  %array containing relative acceleration matrix of frame (p) seen in frame (p-1)
+mabs=zeros(4,4*(MAXLINK+1));       % array containing absolute position matrix of frame (p) in base frame
+Wabs=zeros(4,4*(MAXLINK+1));       % array containing absolute velocity matrix of frame (i) in base frame
+Habs=zeros(4,4*(MAXLINK+1));       % array containing absolute acceleration matrix of frame (i) in base frame
+mabsinv=NULL4;    % inverse position matrix of the frame positioned in the center of the gripper
 Lrelp=NULL4;                       % L relative matrix of p-th joint seen in frame (p-1)
 Lrel0=NULL4;                       % L relative matrix of p-th joint seen in base frame
-Wrel0=zeros(4,4*(MAXLINK+1));    % array containing rel.vel.mat.of frame (p) seen in base frame
-Hrel0=zeros(4,4*(MAXLINK+1));    % array containing rel.acc.mat.of frame (p) seen in base frame
+Wrel0=zeros(4,4*(MAXLINK+1));    % array containing rel velocity matrix of frame (p) seen in base frame
+Hrel0=zeros(4,4*(MAXLINK+1));    % array containing relative acceleration matrix of frame (p) seen in base frame
 Wtar=NULL4;                        % target velocity matrix
 Htar=NULL4;                        % target acceleration matrix
 dH=NULL4;                          % Htar - H~    H~ is the acceleration evaluated with qpp=0
-Aus =UNIT4;
-Waus=NULL4;
-Haus=NULL4;
+Aux =UNIT4;
+Waux=NULL4;
+Haux=NULL4;
 Wabs(:,1:4)=NULL4;
 Habs(:,1:4)=NULL4;
 gripper=zeros(4,4);
@@ -88,7 +88,7 @@ Jac=zeros(MAXLINK,MAXLINK);                 % Matrices initialization
 first(Z)=a(2);
 mtar=NULL4;
 dH=NULL4;
-mabs(:,1:4)=rotat24(Z,PIG_2,first);         % pos. mat. of frame 0 from base frame
+mabs(:,1:4)=rotat24(Z,PIG_2,first);         % position matrix of frame 0 from base frame
 Last(Z,U)=a(7);                             % gripper position in frame 6
 a(2)=0;                                     % D&H parameter 'a' of link 1 and link 6 are zero
 a(7)=0;
@@ -128,10 +128,10 @@ while       ~feof(motion)                   % main loop
             for i=1:1:MAXLINK
                   p=4*i-3;
                   pp=[p:p+3];
-                                                                      % builds rel. pos. matrix
-                  mrelp_1(:,pp)=dhtom(Rev,theta(i),d(i),b(i),a(i+1),fi(i+1),q(i));
-                  mabs(:,pp+4)=mabs(:,pp)*mrelp_1(:,pp);              % builds abs. pos. matrix
-                  Lrelp=makel2(Rev,Z,0.,orig);             % builds rel. L matrix in base frame
+                                                                      % builds relative position matrix
+                  mrelp_1(:,pp)=dhtom(Rev,theta(i),d(i),b(i),a(i+1),phi(i+1),q(i));
+                  mabs(:,pp+4)=mabs(:,pp)*mrelp_1(:,pp);              % builds absolute position matrix
+                  Lrelp=makel2(Rev,Z,0.,orig);             % builds relative L matrix in base frame
                   Lrel0=mami(Lrelp,mabs(:,pp));              % builds rel L matrix in frame (p)
                   buf(1)=Lrel0(X,U);
                   buf(2)=Lrel0(Y,U);
@@ -163,15 +163,15 @@ while       ~feof(motion)                   % main loop
             end                                            % end if
       end                                                  % fine del ciclo maxiter
       if (k<maxiter)
-            Aus(X,U)=gripper(X,U);
-            Aus(Y,U)=gripper(Y,U);
-            Aus(Z,U)=gripper(Z,U);
-            Waus=cardatow(q1,qp1,ii,jj,kk,O);              % builds target velocity matrix
-            Waus=vmcopy(vel,3,4,Col,Waus,4,4);
-            Wtar=mami(Waus,Aus);         % transform velocity from ausiliar frame to base frame
-            Haus=cardatoh(q1,qp1,qpp1,ii,jj,kk,O);         % builds target acceleration matrix
-            Haus=vmcopy(acc,3,4,Col,Haus,4,4);
-            Htar=mami(Haus,Aus);           % transform accel. from ausiliar frame to base frame
+            Aux(X,U)=gripper(X,U);
+            Aux(Y,U)=gripper(Y,U);
+            Aux(Z,U)=gripper(Z,U);
+            Waux=cardatow(q1,qp1,ii,jj,kk,O);              % builds target velocity matrix
+            Waux=vmcopy(vel,3,4,Col,Waux,4,4);
+            Wtar=mami(Waux,Aux);         % transform velocity from auxiliary frame to base frame
+            Haux=cardatoh(q1,qp1,qpp1,ii,jj,kk,O);         % builds target acceleration matrix
+            Haux=vmcopy(acc,3,4,Col,Haux,4,4);
+            Htar=mami(Haux,Aux);           % transform acceleration from auxiliary frame to base frame
             buf(1)=Wtar(X,U);                              % builds joint velocity array
             buf(2)=Wtar(Y,U);
             buf(3)=Wtar(Z,U);
@@ -188,7 +188,7 @@ while       ~feof(motion)                   % main loop
                [Wrelp_1(:,pp),Hrelp_1(:,pp)]=veactowh(Rev,qp(i),0.);
                Wrel0(:,pp)=mami(Wrelp_1(:,pp),mabs(:,pp)); % W and H matrices in frame 0
                Hrel0(:,pp)=mami(Hrelp_1(:,pp),mabs(:,pp));
-               Wabs(:,pp+4)=Wabs(:,pp)+Wrel0(:,pp);        % abs. vel. and acc. matrices
+               Wabs(:,pp+4)=Wabs(:,pp)+Wrel0(:,pp);        % absolute velocity and acceleration matrices
                Habs(:,pp+4)=coriolis(Habs(:,pp),Hrel0(:,pp),Wabs(:,pp),Wrel0(:,pp));
        end                                                 % end ciclo for sui MAXLINK
        dH=Htar-Habs(:,pp+4);

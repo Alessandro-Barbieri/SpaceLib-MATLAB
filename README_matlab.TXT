@@ -1,9 +1,9 @@
 --------------------------------------------------------------------
-version 2.2a October 2009 tested with matlab matlab 7.6.0.324 R2008a
+version 2.2a October 2009 tested with MATLAB MATLAB 7.6.0.324 R2008a
 --------------------------------------------------------------------
 Information on the last patches at the end of this file
 --------------------------------------------------------------------
-What is SPACELIB(c)?
+What is SPACELIB©?
 SPACELIB is a software library useful 
 for the realization of programs for the kinematic and dynamic 
 analysis of systems of rigid bodies. 
@@ -12,10 +12,10 @@ It has been developed at the Mechanical Engineering Department
 of the University of Brescia.
 
 Two versions of the library are currently available
-(see http://bsing.ing.unibs/~glegnani for code, description and user's manual):
+(see http://robotics.unibs.it/SpaceLib/ for code, description and user's manual):
 
-	* c language (numerical computetion)
-	* matlab     (numerical computation)
+	* c language (numerical computation)
+	* MATLAB     (numerical computation)
 	* MAPLEV     (symbolic manipulation)
 
 The library is offered with:
@@ -37,20 +37,20 @@ The functions contained in the library are devoted to:
     ...
 * basic operation on vectors
     module, dot product, cross product, ...
-* tranformation matrices (rototranslations)
+* transformation matrices (rototranslations)
 * velocity and acceleration matrices
 * Cardan/Euler angles
-    tranformation of angles to/from rotation matrices
+    transformation of angles to/from rotation matrices
     derivative of angles to/from angular velocity and acceleration
 * linear systems
 
 The library is intended as an aid in writing programs for the 
 analysis of systems of rigid bodies following a particular 
-methodology based on 4*4 matrices. This approach can be 
+methodology based on 4×4 matrices. This approach can be 
 considered a powerful generalization of the Transformation 
 Matrix Approach  proposed by Denavit and Hartenberg.
 Shortly: the position and the orientation of each body is 
-represented by 4*4 transformation matrices.
+represented by 4×4 transformation matrices.
 Two others matrices called W and H are utilized for the velocity 
 and the acceleration (linear and angular).
 Additional matrices are used for the momentum, forces, torques, 
@@ -72,7 +72,7 @@ patch FEBRUARY 2003
 Some bugs fixed.
 
 And also improved compatibility with release 12.
-Some functions worked well with previous versions but failed with version 12 (e.g. functions dist() and mod() had to be renamed to avoid conflics, some vector converted to row to column, logical operator precedence checked, etc...)
+Some functions worked well with previous versions but failed with version 12 (e.g. functions dist() and mod() had to be renamed to avoid conflicts, some vector converted to row to column, logical operator precedence checked, etc...)
 
 Some minor bugs have been also corrected.
 --------------------------------------------------------------------
@@ -87,14 +87,14 @@ Manual improved and supplied in PDF format.
 
 Some bugs fixed.
 Functions normal, normal_g and psedot added.
-Functions solve renamed to ovid conflicts with Matlab version 12.
+Functions solve renamed to avoid conflicts with MATLAB version 12.
           
 --------------------------------------------------------------------
-patch november 2005
+patch November 2005
 
 manual restyled and extended
 minor bugs fixed
-few new funtions added (dhtomstd, psedot, crosstom, translat, translat2, translat24)
+few new functions added (dhtomstd, psedot, crosstom, translat, translat2, translat24)
           
 --------------------------------------------------------------------
 patch October 2009
@@ -104,13 +104,13 @@ eliminated problems with lower/upper case mismatching
 simplified installation
 --------------------------------------------------------------------
 
-The library is free avalailable for non-profit activities including 
+The library is free available for non-profit activities including 
 scientific and educational purposes.
-See also the "disclaimer warranties" statment in the manual.
+See also the "disclaimer warranties" statement in the manual.
 
 For commercial activities please contact:
 Giovanni Legnani
-Universita di Brescia
+Università di Brescia
 Dip. Ing. Meccanica
 Via Branze 38
 25123 Brescia, Italy.
@@ -118,6 +118,6 @@ Via Branze 38
 phone +39/030 3715425
 fax   +39/030 3702448
 
-e-mail: giovanni.legnani @ ing.unibs.it
+e-mail: giovanni.legnani @ unibs.it
 www:    http://bsing.ing.unibs/~glegnani
-www:    http://spacelib.ing.unibs.it
+www:    http://spacelib.unibs.it

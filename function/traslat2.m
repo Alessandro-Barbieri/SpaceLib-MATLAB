@@ -13,7 +13,7 @@ function M=traslat2(a,h)
 %			M=traslat2(a,h)
 %
 %
-% (c) G.Legnani, D.Manara 2005
+% © G.Legnani, D.Manara 2005
 %___________________________________________________________________________
 
 spheader

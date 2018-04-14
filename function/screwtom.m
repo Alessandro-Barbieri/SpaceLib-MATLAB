@@ -1,42 +1,42 @@
 
-function M=screwtom(u,fi,p,h)
+function M=screwtom(u,phi,p,h)
 
-%SCREWTOM (Spacelib): Builds the rototraslation matrix Q.
+%SCREWTOM (Spacelib): Builds the rototranslation matrix Q.
 %
 % Screw to matrix. 
-% Builds the rototraslation matrix Q from the axis of the screw displacement 
-% , the rotation angle fi, the traslation h along u and the coordinates  of 
+% Builds the rototranslation matrix Q from the axis of the screw displacement 
+% , the rotation angle phi, the translation h along u and the coordinates  of 
 % a point P of the axis.
 % Input parameters:
-% u  : 3-element vector which defines the rototraslation axis
-% fi :  rotation angle
+% u  : 3-element vector which defines the rototranslation axis
+% phi :  rotation angle
 % P  : a POINT  of the axis
-% h  : is the traslation along the axis.
+% h  : is the translation along the axis.
 %
 % Output:
-% Q  : 4*4 rototraslation matrix.
+% Q  : 4×4 rototranslation matrix.
 %
 % SCREWTOM performs the inverse operation than MTOSCREW.
 % Usage:
 %
-%			M=screwtom(u,fi,p,h)
+%			M=screwtom(u,phi,p,h)
 %
 % Related functions: EXTRACT, ROTAT, ROTAT2,ROTAT24.
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
 %___________________________________________________________________________
 
 spheader
 
 u=unitv(u);
-M(1:3,1:3)=rotat(u,fi);
+M(1:3,1:3)=rotat(u,phi);
 M(1:3,4)=(eye(3,3)-M(1:3,1:3))*p(1:3)+h*u;
 M(4,1:4)=[0 0 0 1];
 
 %u=unitv(u);
-%M=rotat(u,fi); 
+%M=rotat(u,phi); 
 
-%M(1:3;1:3)=rotat(u,fi);
+%M(1:3;1:3)=rotat(u,phi);
 %for i=X:1:Z
 %	for j=X:1:Z
 %		M1(i,j)=M(i,j);

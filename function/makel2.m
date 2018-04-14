@@ -4,11 +4,11 @@ function L=makel2(type,a,pitch,P)
 %MAKEL2 (Spacelib): Builds a L matrix - version 2.
 %
 % Builds a L matrix - version 2.
-% This  function  builds  a  L  matrix describing a rotation or a traslation 
+% This  function  builds  a  L  matrix describing a rotation or a translation 
 % about an axis parallel to the frame axis 'a' and passing through the point 
 % 'P'.
 % 		
-% - 'a' is the axis of rototraslation it must be the constant X,Y or Z.
+% - 'a' is the axis of rototranslation it must be the constant X,Y or Z.
 % - 'pitch' is the pitch of the screw.
 % - 'type' specifies the  type of the motion. It must be either the constant 
 %   Pri for prismatic joints or Rev for revolute or screw joints. 
@@ -19,7 +19,7 @@ function L=makel2(type,a,pitch,P)
 % Usage:
 % 			L=makel2(type,a,pitch,P)
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Adamini 1993
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Adamini 1993
 %___________________________________________________________________________
 
 

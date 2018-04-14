@@ -11,7 +11,7 @@ function T=tracljlt(L1,J,L2)
 % Usage:
 % 			T=tracljlt(L1,J,L2)
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
 %___________________________________________________________________________
 
 T=trace(L1*J*L2');

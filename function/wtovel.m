@@ -17,7 +17,7 @@ function [axis,omega,vel,P]=wtovel(W)
 %
 %			 [axis,omega,vel,P]=wtovel(W)
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Adamini 1993
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Adamini 1993
 %___________________________________________________________________________
 
 

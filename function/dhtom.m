@@ -1,10 +1,10 @@
 
 function M=dhtom(type,theta,d,b,a,alfa,q)
 
-%DHTOM (Spacelib): Denavit and Hartemberg parameters to Matrix (extended version).
+%DHTOM (Spacelib): Denavit and Hartenberg parameters to Matrix (extended version).
 %
 % Builds  the  position  matrix  m  of  a link from the extended Denavit and 
-% Hartemberg's  parameters  q, theta, d, b, a, alpha, the value of the joint 
+% Hartenberg's  parameters  q, theta, d, b, a, alpha, the value of the joint 
 % coordinate q and the type of the joint 'jtype'. 
 % jtype is an integer whose value must be either Rev or Pri. Rev and Pri are 
 % constants  defined  in  the  header  file  spheader.m.  If the joint type is 
@@ -26,7 +26,7 @@ function M=dhtom(type,theta,d,b,a,alfa,q)
 %			M=dhtom(jtype,theta,d,b,a,alfa,q)
 %
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
 %___________________________________________________________________________
 
 

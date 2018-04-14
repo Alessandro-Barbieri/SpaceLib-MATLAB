@@ -8,9 +8,9 @@ function c=middle(a,b)
 % Calling sintax: 
 %			c=middle(a,b)
 %
-% The function returns the point c in homogeneus coordinates
+% The function returns the point c in homogeneous coordinates
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Adamini 1993
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Adamini 1993
 %___________________________________________________________________________
 
 spheader

@@ -15,7 +15,7 @@
 %
 %			[l,test]=inter2pl(pl1,pl2)
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: AMADORI,GHISLOTTI,PUGLIESE 1997
+% © G.Legnani, C. Moiola 1998; adapted from: AMADORI,GHISLOTTI,PUGLIESE 1997
 % patched by G. Legnani November 2001
 %_____________________________________________________________________________
 

@@ -4,10 +4,10 @@
 %
 % Program  for  the  automatic  solution of the direct kinematic problem and the inverse
 % dynamic problem for any serial manipulator. The  program  reads from a "description file
-% (*.DAT)" the structure of the robot (number of links, lenghts, masses, joint type,ecc.),
+% (*.DAT)" the structure of the robot (number of links, lengths, masses, joint type,ecc.),
 % and from a " motion file (*.MOT)" the motors movement, and, as output, prints the motion
 % (position, velocity, acceleration) of each link.
-% (c) G.Legnani 1998 adapted from G.Legnani and R.Faglia 1990
+% © G.Legnani 1998 adapted from G.Legnani and R.Faglia 1990
 %____________________________________________________________________________________________
 
 clc

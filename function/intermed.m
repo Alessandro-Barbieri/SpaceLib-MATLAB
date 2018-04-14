@@ -18,14 +18,14 @@ function P3=intermediate(P1,a,P2,b)
 %
 % Related functions: MIDDLE
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: D.Amadori - G.Pugliese - Ghislotti
-% bug fixed by g.legnani october 2003
-% bug fixed by d.manara january 2005
+% © G.Legnani, C. Moiola 1998; adapted from: D.Amadori - G.Pugliese - Ghislotti
+% bug fixed by g.legnani October 2003
+% bug fixed by d.manara January 2005
 %___________________________________________________________________________
 
 
-% by g.legnani october 2003
-% by d.manara january 2005
+% by g.legnani October 2003
+% by d.manara January 2005
 c=a+b;
 if (c=0)
    fprintf(1,'intermediate: wrong weights');

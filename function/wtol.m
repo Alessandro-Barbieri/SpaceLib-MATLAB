@@ -4,13 +4,13 @@ function L=wtol(W)
 %WTOL (Spacelib): Extracts L matrix from the corresponding W matrix.
 %
 % Input paerameters:
-% 	W: 4*4 velocity matrix.
+% 	W: 4×4 velocity matrix.
 %
 % Usage: 
 %
 % 			L=wtol(W)
 %			
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990 
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990 
 % patched by G. Legnani November 2001
 %___________________________________________________________________________
 

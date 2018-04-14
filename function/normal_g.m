@@ -8,7 +8,7 @@ function rn=normal_s(r1)
 %
 % NOTE: a  square  matrix  is  ortogonal  if  its transpose and its inverse coincide
 %
-% (c) G.Legnani 2004
+% © G.Legnani 2004
 %___________________________________________________________________________
 
 %NORMAL_G (Spacelib): transform a N*N matrix into the 'most similar' orthogonal matrix.

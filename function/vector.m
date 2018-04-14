@@ -7,7 +7,7 @@ function V=vector(u,m)
 % Usage:
 %			V=vector(u,m)
 % 
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
 %___________________________________________________________________________
 
 V=m*u;

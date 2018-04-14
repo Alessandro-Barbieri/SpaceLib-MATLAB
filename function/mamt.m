@@ -11,7 +11,7 @@ function A2=mamt(A1,M)
 %
 %			A2=mamt(A1,M)
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
 %___________________________________________________________________________
 
 A2=M*A1*M';

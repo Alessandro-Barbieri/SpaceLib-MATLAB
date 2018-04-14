@@ -8,13 +8,13 @@ function d=distp(P1,P2)
 %
 %                       d=distp(P1,P2)     
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Adamini 1993
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Adamini 1993
 % patched by G. Legnani November 2001
 % patched by G. Legnani January 2003
 %
 % replaces the funtion dist(P1,P2) of the previus spacelib versions in order
 % to avoid conflicts with new system functions contained in the new
-% versions of matlab.
+% versions of MATLAB.
 %___________________________________________________________________________
  
 spheader

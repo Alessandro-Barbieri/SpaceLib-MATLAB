@@ -30,11 +30,11 @@ function [lmindist,mindist,pl,I,inttype]=intersec(l1,l2)
 %
 %		[lmindist,mindist,pl,I,inttype]=intersec(l1,l2)
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: AMADORI,GHISLOTTI, PUGLIESE 1997
+% © G.Legnani, C. Moiola 1998; adapted from: AMADORI,GHISLOTTI, PUGLIESE 1997
 % patched by G. Legnani November 2001
-% patched on january 2003 by g.Legnani
+% patched on January 2003 by g.Legnani
 %           (call to function 'dist' replaced to 'distp
-%            for compatibility with new matlab releases)
+%            for compatibility with new MATLAB releases)
 %_____________________________________________________________________________
 
 spheader
@@ -61,7 +61,7 @@ if (abs(u3(X)) > zero | abs(u3(Y)) > zero | abs(u3(Z)) > zero)
 		B=l2(:,X)+v2;                 % point B in the reference frame
 		A(U)=1; B(U)=1;
        %mindist = dist(A,B);          % minimum distance between l1, l2
-        mindist = distp(A,B);          % patch january 2003 for compatibility with the new matlab versions
+        mindist = distp(A,B);          % patch January 2003 for compatibility with the new MATLAB versions
                                               % (avoid name conflicts)
 
 		I=middle(A,B);                % middle point between A and B  

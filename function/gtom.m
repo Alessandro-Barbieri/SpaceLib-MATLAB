@@ -10,7 +10,7 @@ function Hg=gtom(gx,gy,gz)
 %
 % 			Hg=gtom(gx,gy,gz)
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
 %___________________________________________________________________________
 
 

@@ -8,7 +8,7 @@
 %              Via Branze 38
 %              25123 BRESCIA - ITALY
 %
-%              giovanni.legnani@ing.unibs.it
+%              giovanni.legnani@unibs.it
 %---------------------------------------------------------------------------------------------
 
 spheader
@@ -50,7 +50,7 @@ W12=L12f*qp(1);
 W23=L23f*qp(2);
 W34=L34f*qp(3);
 
-W04=W01+W12+W23+W34;                 % builds abs. W matrix of frame 4 in frame 0
+W04=W01+W12+W23+W34;                 % builds absolute W matrix of frame 4 in frame 0
 
 W04a=miam(W04,m0a);                  % Evaluates W matrix of frame 4 in frame (a)
 

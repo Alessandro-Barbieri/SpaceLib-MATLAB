@@ -1,9 +1,9 @@
 
 function M=dhtomstd(theta,d,a,alfa)
 
-%DHTOMstd (Spacelib): Denavit and Hartemberg parameters to Matrix. (standard definition)
+%DHTOMstd (Spacelib): Denavit and Hartenberg parameters to Matrix. (standard definition)
 %
-% Builds  the  position  matrix  m  of  a link from the  standard Denavit and Hartemberg's  
+% Builds  the  position  matrix  m  of  a link from the  standard Denavit and Hartenberg's  
 % parameters  theta, d, a, alpha. 
 %
 %  theta  link rotation
@@ -22,7 +22,7 @@ function M=dhtomstd(theta,d,a,alfa)
 %			M=dhtomstd(theta,d,a,alfa)
 %
 %
-% (c) G.Legnani 2005
+% © G.Legnani 2005
 %___________________________________________________________________________
   
 spheader

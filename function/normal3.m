@@ -8,7 +8,7 @@ function rn=normal3(r1)
 %
 % NOTE: a  square  matrix  is  ortogonal  if  its transpose and its inverse coincide
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
 %___________________________________________________________________________
 
 %NORMAL3 (Spacelib): transform a 3*3 matrix into the 'most similar' orthogonal matrix.

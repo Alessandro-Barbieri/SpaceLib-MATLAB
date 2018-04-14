@@ -33,7 +33,7 @@ function [H,ivet,irank,arm]=linears(H,idim,jdim,imax,jmax,nsol,vpr)
 %               [H,ivet,irank,arm]=linears(H,idim,jdim,imax,jmax,nsol,vpr)
 %
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
 %
 % other native MATLAB functions are also available
 %___________________________________________________________________________

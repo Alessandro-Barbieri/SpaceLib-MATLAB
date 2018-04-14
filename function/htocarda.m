@@ -24,8 +24,8 @@ function [q1,q2,qp1,qp2,qpp1,qpp2]=htocarda(m,W,H,i,j,k)
 %
 %		[q1,q2,qp1,qp2,qpp1,qpp2]=htocarda(m,W,H,i,j,k)
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: D.Amadori, P.Ghislotti G.Pugliese 1997
-% bug fixed january 2003 g.legnani
+% © G.Legnani, C. Moiola 1998; adapted from: D.Amadori, P.Ghislotti G.Pugliese 1997
+% bug fixed January 2003 g.Legnani
 %__________________________________________________________________________ 
 
 
@@ -35,8 +35,8 @@ if ( i<X | i>Z | j<X | j>Z | k<X | k>Z | i==j | j==k )
 	error(' Error in HTOCARDA: Illegal rotation axis ')
 end
 
-if (rem(j-i+3,3)==1)	sig=1;   % ciclic 
-	else            sig=-1;  % anti ciclic
+if (rem(j-i+3,3)==1)	sig=1;   % cyclic 
+	else            sig=-1;  % anti cyclic
 end
 
 [q1,qp1,q2,qp2]=wtocarda(m,W,i,j,k);

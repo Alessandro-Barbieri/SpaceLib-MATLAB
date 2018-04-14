@@ -26,7 +26,7 @@ function [q1,qp1,q2,qp2]=wtocarda(m,W,i,j,k)
 %
 % where qpx can be either qp1 or qp2.
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: D.Amadori, P.Ghislotti G.Pugliese 1997
+% © G.Legnani, C. Moiola 1998; adapted from: D.Amadori, P.Ghislotti G.Pugliese 1997
 %___________________________________________________________________________
 
 spheader
@@ -35,8 +35,8 @@ if ( i<X | i>Z | j<X | j>Z | k<X | k>Z | i==j | j==k )
 	error('	Error in WTOCARDA: Illegal rotation axis');
 end
 
-if ( rem(j-i+3,3)==1 )	sig=1;  % ciclic rotations 
-	else 	        sig=-1;	% anticiclic rotations
+if ( rem(j-i+3,3)==1 )	sig=1;  % cyclic rotations 
+	else 	        sig=-1;	% anticyclic rotations
 end
 
 [q1,q2]=mtocarda(m,i,j,k);

@@ -21,7 +21,7 @@ function OMEGAPTO=cardompt(q,qp,qpp,i,j,k)
 %
 %			OMEGAPTO=cardompt(q,qp,qpp,i,j,k)
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from:  G.Legnani and R.Adamini 1993
+% © G.Legnani, C. Moiola 1998; adapted from:  G.Legnani and R.Adamini 1993
 %___________________________________________________________________________
 
 

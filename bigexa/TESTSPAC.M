@@ -1,8 +1,8 @@
-%TESTSPAC:  TEST PROGRAM FOR THE SPACELIB FUNCTIONS.
+ï»¿%TESTSPAC:  TEST PROGRAM FOR THE SPACELIB FUNCTIONS.
 %
 % Vengono generati dei parametri random da introdurre nelle funzioni per testarle.
 % Questo viene fatto per le funzioni che hanno anche la funzione inversa. 
-% Applicando in sequenza, la funzione e la sua inversa, bisognerà ritrovare 
+% Applicando in sequenza, la funzione e la sua inversa, bisognerÃ  ritrovare 
 % ( a meno di una prefissata tolleranza) i parametri di partenza 
 %
 % patched by G. Legnani November 2001
@@ -29,7 +29,7 @@ contatore=contatore+1;
 if (t==1)
 
         q=jrand(1,3,-pi,pi);
-        fprintf(out,'\nTest nø:%d\n',contatore)
+        fprintf(out,'\nTest nÂ°:%d\n',contatore)
         fprintm(out,'The input screw parameters are:',q)
 
         O=10*jrand(3,1,-5,5); O(U)=1;
@@ -76,7 +76,7 @@ if (t==2)
         i=round(1+2*rand(1,1));
         j=round(1+2*rand(1,1));
         k=round(1+2*rand(1,1));
-        fprintf(out,'\nTest nø:%d\n',contatore)
+        fprintf(out,'\nTest nÂ°:%d\n',contatore)
         fprintm(out,'The input screw parameters are: q =',q)
 	
 	while (i<1)|(j<1)|(k<1)|(i==j)|(j==k)
@@ -117,34 +117,34 @@ if (t==8)
 
 	% Random Inputs
 
-        fi=jrand(1,1,-pi,pi);
+        phi=jrand(1,1,-pi,pi);
         P=jrand(3,1,-5,5);
 	P(U)=1;
         h=jrand(1,1,-5,5);
         V=jrand(3,1,-5,5);
 	u=unitv(V);
-        fprintf(out,'\nTest nø:%d\n',contatore)
+        fprintf(out,'\nTest nÂ°:%d\n',contatore)
         fprintf(out,'The input screw parameters are:')
         fprintm(out,'u =',u)
-        fprintm(out,'fi=',fi)
+        fprintm(out,'phi=',phi)
         fprintm(out,'P =',P)
         fprintm(out,'h =',h)
 
-	M=screwtom(u,fi,P,h);
-        fprintm(out,'The rototraslation matrix obtained with function SCREWTOM is:',M)
+	M=screwtom(u,phi,P,h);
+        fprintm(out,'The rototranslation matrix obtained with function SCREWTOM is:',M)
 
 	[u1 fi1 P1 h1]=mtoscrew(M);
         fprintf(out,'The screw parameters evaluated with function MTOSCREW are:')
         fprintm(out,'u  =',u1)
-        fprintm(out,'fi =',fi1)
+        fprintm(out,'phi =',fi1)
         fprintm(out,'Point P =',P1)
         fprintm(out,'h  =',h1)
 
         sign=u1'*u;
         errore1=1-modulus(sign);
-        errore2=modulus(sign*fi1-fi);
+        errore2=modulus(sign*fi1-phi);
         errore3=modulus(sign*h1-h);
-        errore4=1-abs(u'*unitv(vect(P1,P))); %% by joe
+        errore4=1-abs(u'*unitv(vect(P1,P))); %% by Joe
 
         if (P1(U)~=1)
           contatore
@@ -159,10 +159,10 @@ if (t==8)
 
 	if (errore2)>10e-4
 		fi1 
-		fi 
+		phi 
 		contatore
-                fprintf(out,'*** ERROR IN SCREWTOM OR MTOSCREW: Angle fi...  ***')
-		error('*** ERROR IN SCREWTOM OR MTOSCREW: Angle fi...  ***')
+                fprintf(out,'*** ERROR IN SCREWTOM OR MTOSCREW: Angle phi...  ***')
+		error('*** ERROR IN SCREWTOM OR MTOSCREW: Angle phi...  ***')
 	end
 
 	if (errore3)>10e-4
@@ -172,7 +172,7 @@ if (t==8)
 		error('*** ERROR IN SCREWTOM OR MTOSCREW: Screw displacement h...  ***')
 	end
 
-        if (errore4)>10e-4  % by joe
+        if (errore4)>10e-4  % by Joe
                 P 
                 P1
                 unitv(vect(P,P1))
@@ -241,15 +241,15 @@ if (t==5)
 
 	% Random Inputs
 
-        fi=jrand(1,1,-pi,pi);
+        phi=jrand(1,1,-pi,pi);
         V=jrand(3,1,-5,5);
 	u=unitv(V);
-        fprintf(out,'\nTest nø:%d\n\N',contatore)
+        fprintf(out,'\nTest nÂ°:%d\n\N',contatore)
         fprintf(out,'The input screw parameters are:')
         fprintm(out,'u  :',u)
-        fprintm(out,'fi :',fi)
+        fprintm(out,'phi :',phi)
 
-        M=rotat(u,fi);
+        M=rotat(u,phi);
         fprintm(out,'The matrix obtained with function ROTAT is:',M)
 
 	[u1 fi1]=extract(M);
@@ -259,7 +259,7 @@ if (t==5)
 
         sign=u'*u1;
         errore1=modulus(sign*u1-u);
-        errore2=modulus(sign*fi1-fi);
+        errore2=modulus(sign*fi1-phi);
 
 	if ((errore1)>10e-4)
 		u1 
@@ -270,9 +270,9 @@ if (t==5)
 
 	if (errore2)>10e-4
 		fi1 
-		fi 
+		phi 
 		contatore
-		error('*** ERROR IN EXTRACT OR ROTAT: Angle fi...  ***')
+		error('*** ERROR IN EXTRACT OR ROTAT: Angle phi...  ***')
 	end
 
 
@@ -361,14 +361,14 @@ if (t==6)
 
 	% Random Inputs
 
-        fi=jrand(1,1,-pi,pi);
+        phi=jrand(1,1,-pi,pi);
         u=round(2*rand(1,1))+1;                                % Generazione asse X,Y, or Z
-        fprintf(out,'\nTest nø:%d\n',contatore)
+        fprintf(out,'\nTest nÂ°:%d\n',contatore)
         fprintf(out,'The input screw parameters are:')
         fprintm(out,'u  :',u)
-        fprintm(out,'fi :',fi)
+        fprintm(out,'phi :',phi)
 
-        M=rotat2(u,fi);
+        M=rotat2(u,phi);
         fprintm(out,'The matrix obtained with function ROTAT2 is:',M)
 
 	[u1 fi1]=extract(M);
@@ -381,7 +381,7 @@ if (t==6)
 
         sign=uu'*u1;
         errore1=modulus(sign*uu-u1);
-        errore2=modulus(sign*fi1-fi);
+        errore2=modulus(sign*fi1-phi);
 
 	if ((errore1)>10e-4)
 		uu 
@@ -392,9 +392,9 @@ if (t==6)
 
 	if (errore2)>10e-4
 		fi1 
-		fi 
+		phi 
 		contatore
-		error('*** ERROR IN EXTRACT OR ROTAT2: Angle fi  ***')
+		error('*** ERROR IN EXTRACT OR ROTAT2: Angle phi  ***')
 	end
 
 end % if t==6
@@ -411,19 +411,19 @@ if (t==7)
 
 	% Random Inputs
 
-        fi=jrand(1,1,-pi,pi);
+        phi=jrand(1,1,-pi,pi);
 	u=round(2*rand(1,1))+1; % Generi l'asse X,Y,Z, or U
         uu=[0 0 0 ]'; 
 	uu(u)=1;
         O=jrand(3,1,-10,10);
 	O(U)=1;
-        fprintf(out,'\nTest nø:%d\n',contatore)
+        fprintf(out,'\nTest nÂ°:%d\n',contatore)
         fprintf(out,'The input screw parameters are:')
         fprintm(out,'u  :',uu)
-        fprintm(out,'fi :',fi)
+        fprintm(out,'phi :',phi)
         fprintm(out,'O  :',O)
 
-	M=rotat24(u,fi,O);
+	M=rotat24(u,phi,O);
         fprintm(out,'The matrix obtained with function ROTAT24 is:',M)
 
 	[u1 fi1]=extract(M);
@@ -434,7 +434,7 @@ if (t==7)
         sign=u1'*uu;
 
         errore1=modulus(sign*u1-uu);
-        errore2=modulus(sign*fi1-fi);
+        errore2=modulus(sign*fi1-phi);
 
 	if ((errore1)>10e-4)
 		u
@@ -446,9 +446,9 @@ if (t==7)
 
 	if (errore2)>10e-4
 		fi1 
-		fi 
+		phi 
 		contatore
-		error('*** ERROR IN EXTRACT OR ROTAT24: Angle fi...  ***')
+		error('*** ERROR IN EXTRACT OR ROTAT24: Angle phi...  ***')
 	end
 
 end % if t==7
@@ -506,7 +506,7 @@ fprintf(out,'TEST FUNCTION INTER2PL\n');
 
 		[l,test]=inter2pl(pl1,pl2);
 
-                fprintf(out,'\n\n TEST Nø %d\n',numtent);
+                fprintf(out,'\n\n TEST NÂ° %d\n',numtent);
                 fprintm(out,'First  plane  is  :',pl1);
                 fprintm(out,'Second plane  is  :',pl2);
 
@@ -529,9 +529,9 @@ end %if t==9
 if (t==10)
 	fprintf(out,'\n\nTEST Function: PSEUDINV.m\n');
 	fprintf(out,'\nWe create 10 random vectors. We build the');
-	fprintf(out,'\npseudo-invers matrix with the function PSEUDINV');
+	fprintf(out,'\npseudo-inverse matrix with the function PSEUDINV');
 	fprintf(out,'This matrix verify the property :');
-	fprintf(out,'\n(A+)=At/(At*A) where A+ is the pseudo-invers and At is the transpose matrix\n');
+	fprintf(out,'\n(A+)=At/(At*A) where A+ is the pseudo-inverse and At is the transpose matrix\n');
 	for numtent=1:1:10
 		numrow=round(10*rand(1));
 		if (numrow==0)
@@ -546,9 +546,9 @@ if (t==10)
 		end
 		Api=pseudinv(A);
 		B=A'/(A'*A);
-                fprintf(out,'\n\n TEST Nø %d \n',numtent);
+                fprintf(out,'\n\n TEST NÂ° %d \n',numtent);
 		fprintm(out,' The  starting  matrix  is :', A);
-		fprintm(out,' The pseudo-invers matrix is :',Api);
+		fprintm(out,' The pseudo-inverse matrix is :',Api);
 		fprintm(out,' The product At/((At)*A) is : ',B);
 	end
 end %chiude if t==10
@@ -588,7 +588,7 @@ for numtent=1:1:2
 
 	P1(U)=1; P2(U)=1;
 		
-	fprintf(out,'\n\n Test N° %d\n',numtent);
+	fprintf(out,'\n\n Test NÂ° %d\n',numtent);
 
 	fprintm(out,'First  point is :',P1');
 	fprintm(out,'Second point is :',P2');

@@ -10,12 +10,12 @@ function [u,t]=unitv(V)
 % Usage: 
 %			[u,t] = unitv(V)
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
 % patched by G. Legnani nomember 2001
 %___________________________________________________________________________
 
 
-t=modulus(V);   %patch by g. legnani november 2001
+t=modulus(V);   %patch by G. Legnani November 2001
 
 if (t~=0)
 	u=V/t;

@@ -1,7 +1,7 @@
 
 function prmat(grpout,string,M)
 
-%FPRINTM (Spacelib): Prints in a file the text string 'string' and the 4*4 matrix M 
+%FPRINTM (Spacelib): Prints in a file the text string 'string' and the 4×4 matrix M 
 % using the format of GRP_MAN graphics post processor.
 %
 % grpot   file 
@@ -12,7 +12,7 @@ function prmat(grpout,string,M)
 % 
 % 			prmat(grpout,'string',M)
 %
-% (c) G.Legnani; adapted from: G.Legnani and R.Faglia 1990
+% © G.Legnani; adapted from: G.Legnani and R.Faglia 1990
 % bug fixed - jan 2003 - g.legnani
 %___________________________________________________________________________
 

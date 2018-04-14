@@ -8,11 +8,11 @@ function V=vect(a,b)
 %
 %		V=vect(a,b)	
 %
-% The points must be specified in homogeneus coordinates:
+% The points must be specified in homogeneous coordinates:
 %
 % 		a=[x1 y1 z1 1]'		b=[x2 y2 z2 1]'
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.legnani and R.Adamini 1993
+% © G.Legnani, C. Moiola 1998; adapted from: G.legnani and R.Adamini 1993
 %___________________________________________________________________________
 
 spheader

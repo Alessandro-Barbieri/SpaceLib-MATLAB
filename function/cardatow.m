@@ -17,7 +17,7 @@ function W=cardatow(q,qp,a1,a2,a3,O)
 %
 % Related functions: CARDATOH
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Adamini 1993
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Adamini 1993
 %___________________________________________________________________________
 
 

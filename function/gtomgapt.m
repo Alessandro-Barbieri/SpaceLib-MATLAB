@@ -15,7 +15,7 @@ function omegapto=gtomgapt(G)
 % Usage:
 %				omegapto=gtomgapt(G)
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: D.Amadori, G.Pugliese 1997
+% © G.Legnani, C. Moiola 1998; adapted from: D.Amadori, G.Pugliese 1997
 %_____________________________________________________________________________
 
 Gt=G';

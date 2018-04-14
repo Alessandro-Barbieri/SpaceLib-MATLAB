@@ -4,7 +4,7 @@
 %
 %				ROTOTRASLATION
 %
-% In this  example  we  show  how  to  calculate  the  rototraslation of the 
+% In this  example  we  show  how  to  calculate  the  rototranslation of the 
 % triangle  which  passes  from  the  position (1)  to the position (2), see
 % SPACELIB user's manual for more information.
 %___________________________________________________________________________
@@ -27,23 +27,23 @@ m02=frame4p(P4,P5,P6,Y,Z);
 
 m10=invers(m01);
 
-% Builds rototraslation matrix 
+% Builds rototranslation matrix 
 
 Q=m02*m10;
 
 
 % Extract screw parameters
-[u,fi,P,h]=mtoscrew(Q);
+[u,phi,P,h]=mtoscrew(Q);
 
 
 %-------- Print Output results:
 
 fprintm(1,'Position matrix M10:',m10)
 fprintm(1,'Position matrix M02:',m02)
-fprintm(1,'Rototraslation matrix Q:',Q)
+fprintm(1,'Rototranslation matrix Q:',Q)
 disp('The screw parameters are:')
 fprintm(1,'Axis direction u:',u)
-fprintm(1,'Rotation angle fi [rad]',fi)
+fprintm(1,'Rotation angle phi [rad]',phi)
 fprintm(1,'Point of the axis P:',P')
 fprintm(1,'Traslation along the axis h:',h)
 

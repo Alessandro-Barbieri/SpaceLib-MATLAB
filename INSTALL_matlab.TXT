@@ -1,5 +1,5 @@
 --------------------------------------------------------------------
-version 2.2a October 2009 tested with matlab matlab 7.6.0.324 R2008a
+version 2.2a October 2009 tested with MATLAB MATLAB 7.6.0.324 R2008a
 --------------------------------------------------------------------
 
 To install SPACELIB follows the instruction contained in the manual section 2.1
@@ -8,7 +8,7 @@ As an alternative unzip the files in a directory of your choice, for instance
 
    c:\users\spacelib_m
 
-and you can add the following two lines to file startup.m contained in the matlab directory:
+and you can add the following two lines to file startup.m contained in the MATLAB directory:
 
    addpath c:\users\spacelib_m
    spacelib
@@ -22,7 +22,7 @@ see information in README.TXT
 alternative installation procedure
 
 1) Copy all the files in a directory of your choice
-2) Run matlab, and from the main menu choose "File>Set Path..."
+2) Run MATLAB, and from the main menu choose "File>Set Path..."
 3) Select the directory in which SpaceLib is installed and press "add with subfolders"
 4) Press "save"
 5) press "Close"

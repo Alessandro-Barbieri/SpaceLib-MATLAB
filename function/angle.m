@@ -11,7 +11,7 @@ function alfa=angle(P1,P2,P3)
 %			alfa=angle(P1,P2,P3)			
 %
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Adamini 1993
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Adamini 1993
 %___________________________________________________________________________
 
 

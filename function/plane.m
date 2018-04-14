@@ -12,7 +12,7 @@ function pl=plane(P1,P2,P3)
 % Usage:
 %		pl=plane(P1,P2,P3)
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: AMADORI, GHISLOTTI,PUGLIESE 1997
+% © G.Legnani, C. Moiola 1998; adapted from: AMADORI, GHISLOTTI,PUGLIESE 1997
 %___________________________________________________________________________
 
 spheader

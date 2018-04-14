@@ -8,7 +8,7 @@ function A=clearmat(m,n)
 %
 %		A=clearmat(m,n)
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.legnani and R.Adamini 1993
+% © G.Legnani, C. Moiola 1998; adapted from: G.legnani and R.Adamini 1993
 %___________________________________________________________________________
 
 
