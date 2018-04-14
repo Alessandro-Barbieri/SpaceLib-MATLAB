@@ -20,7 +20,7 @@ function [W,H]=vactowh2(type,a,qp,qpp)
 % 
 % Related functions: VEACTOWH, VACTOWH3
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
 %___________________________________________________________________________
 
 spheader
@@ -29,11 +29,11 @@ W=zeros(4);
 H=zeros(4);
 
 
-if ( (type~=Rev) & (type~=Pri) )
+if ( (type~=Rev) && (type~=Pri) )
 	error('**** Error in VACTOWH2 : Illegal joint type  ****')
 end
 
-if ( a<X | a>Z )
+if ( a<X || a>Z )
 	error('**** Error in VACTOWH2 : Illegal rotation axis ****')
 end
 

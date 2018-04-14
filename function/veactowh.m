@@ -9,14 +9,14 @@ function [W,H]=veactowh(type,qp,qpp)
 % axis of the local reference frame. 
 % 'jtype' is an integer whose values must be either Rev or Pri. 
 % Rev and Pri are constants defined in the header file spacelib.m. 
-% Frames are assumed  to  be  positioned  using the Denavit and Hartemberg's 
+% Frames are assumed  to  be  positioned  using the Denavit and Hartenberg's 
 % convention.
 % Related functions: VACTOWH2, VACTOWH3.
 % Usage:
 %
 %	           	[W,H]=veactowh(type,qp,qpp)
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
 %___________________________________________________________________________
 
 
@@ -25,7 +25,7 @@ spheader
 W=zeros(4);
 H=zeros(4);
 
-if ( (type~=Rev) & (type~=Pri) )
+if ( (type~=Rev) && (type~=Pri) )
 	error('Error in VEACTOWH: Illegal joint type ')
 end
 

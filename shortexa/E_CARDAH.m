@@ -12,4 +12,4 @@ H=cardatoh(q,qp,qpp,X,Z,Y,O);
 printm('The acceleration matrix obtained with function cardatoh is:',H)
 M=cardatom(q,X,Z,Y,O);
 W=cardatow(q,qp,X,Z,Y,O);
-[q1,q2,qp1,qp2,qpp1,qpp2]=Htocarda(M,W,H,X,Z,Y)
+[q1,q2,qp1,qp2,qpp1,qpp2]=htocarda(M,W,H,X,Z,Y)

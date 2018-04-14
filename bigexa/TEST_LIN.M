@@ -15,7 +15,7 @@ ivet=zeros(Mmax,1);
 vpr=zeros(1);
 vpr(1)=-1;
 clc                           % Read matrix of coefficients and right-hand side vector from file
-fid=fopen('inp.dat','r');
+fid=fopen('INP.DAT','r');
 if (fid==-1)
         error('Error: unable to open input file in TEST_LIN.M ')
 end

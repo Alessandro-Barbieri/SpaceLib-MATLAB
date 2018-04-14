@@ -1,4 +1,4 @@
-                                 
+﻿                                 
 %___________________________________________________________________________
 %
 %                       HEADER FILE     SPACELIB.M (November 2005)
@@ -8,18 +8,18 @@
 %
 % HEADER FILE USAGE:
 %
-% 1) If this M-file is invoked by the matlab command window or by the
+% 1) If this M-file is invoked by the MATLAB command window or by the
 % matlabrc.m file, all the global variables are automatically loaded
 % in memory (see user's manual).
 %
-% Typing the istruction "who global", MATLAB displays the list of the global     
+% Typing the instruction "who global", MATLAB displays the list of the global     
 % variables loaded in memory.
 %
 % 2) Every function that uses the global variables, must invoke the
 % file 'spheader.m' in the first line of the code (see chapter 2.1 of the 
 % user manual). 
 %
-% 3) The directories containig SPACELIB are assigned to global variables
+% 3) The directories containing SPACELIB are assigned to global variables
 %    and the default directory is set accordingly.
 %
 % WARNING 1: The global variables defined in this m-file 
@@ -84,11 +84,11 @@ UNIT4=eye(4);
 % ***-----> the following line MUST be updated to match your installation!!!
 %spc_lib_dir='C:\Users\Utente\Documents\Spacelib\SpaceLib_Matlab_v2.2'  % spacelib directory
 % *** the update of the string is no longer necessary in this new version
-% (october 2009)
+% (October 2009)
 
-%%%% patch october 2009 - the following two lines automatically set the correct value for spc_lib_dir
+%%%% patch October 2009 - the following two lines automatically set the correct value for spc_lib_dir
 p = mfilename('fullpath'); % name of the m-file
-[spc_lib_dir, name, ext, versn] = fileparts(p);  %automatically update the string
+[spc_lib_dir, name, ext] = fileparts(p);  %automatically update the string
 
 %spc_lib_dir_f=[spc_lib_dir,'\function'];	   % functions
 %spc_lib_dir_s=[spc_lib_dir,'\shortexa'];     % short examples
@@ -98,19 +98,8 @@ spc_lib_dir_f=[spc_lib_dir,filesep,'function'];	   % functions
 spc_lib_dir_s=[spc_lib_dir,filesep,'shortexa'];    % short examples
 spc_lib_dir_b=[spc_lib_dir,filesep,'bigexa'];      % big examples
 
-tmp0=strfind(matlabpath,spc_lib_dir);
-tmp1=strfind(matlabpath,spc_lib_dir_f);
-tmp2=strfind(matlabpath,spc_lib_dir_s);
-tmp3=strfind(matlabpath,spc_lib_dir_b);
+addpath(spc_lib_dir,spc_lib_dir_f,spc_lib_dir_s,spc_lib_dir_b);
 
-if (isempty(tmp0) |...
-    isempty(tmp1) |...
-    isempty(tmp2) |...
-    isempty(tmp3)) 
-     matlabpath([matlabpath,';', spc_lib_dir,';', spc_lib_dir_f, ';',spc_lib_dir_s,';', spc_lib_dir_b]);
-end
-
-clear tmp0 tmp1 tmp2 tmp3
 %tmp= ['cd ',spc_lib_dir];  % patch November 2005
 %eval(tmp);
 %clear tmp;
@@ -128,16 +117,15 @@ fprintf('                     the kinematic and dynamic analysis\n')
 fprintf('                         of systems of rigid bodies.\n\n')
 fprintf('                  Includes general functions for vectors, matrices,\n')
 fprintf('               kinematics, dynamics, Euler angles and linear systems\n\n')
-fprintf('                  (c) G.LEGNANI  B.ZAPPA   R.ADAMINI 1990 - 2009\n\n')
-fprintf('           MATLAB� version with the cooperation of C.MOIOLA and D.MANARA\n')
+fprintf('                  © G.LEGNANI  B.ZAPPA   R.ADAMINI 1990 - 2009\n\n')
+fprintf('           MATLAB© version with the cooperation of C.MOIOLA and D.MANARA\n')
 fprintf('            University of Brescia - Mechanical Engineering Department\n')         
 fprintf('                       Via Branze 38, 25123 BRESCIA, Italy\n')   
-fprintf('                     e-mail: giovanni. legnani @ ing.unibs.it\n')    
-fprintf('                           www:http://spacelib.ing.unibs.it\n\n')
-fprintf('                     www:http://bsing.ing.unibs.it/~glegnani\n\n')
-fprintf('                         SPACELIB� loaded in workspace\n')
+fprintf('                     e-mail: giovanni. legnani @ unibs.it\n')    
+fprintf('                           http://robotics.unibs.it/SpaceLib/\n\n')
+fprintf('                         SPACELIB© loaded in workspace\n')
 fprintf('\n');
-fprintf(' bug fixed Jan 2004, Nov 2005, Oct 2009   (tested with matlab 7.6.0.324 R2008a)\n');
+fprintf(' bug fixed Jan 2004, Nov 2005, Oct 2009   (tested with MATLAB 7.6.0.324 R2008a)\n');
 fprintf(' see readme.txt and user''s manual for release notes\n');
 fprintf('___________________________________________________________________________\n')
 

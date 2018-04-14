@@ -20,13 +20,13 @@ function R=framep(P1,P2,P3,a1,a2)
 %
 % Related functions: FRAME4P.
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Adamini 1993
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Adamini 1993
 %___________________________________________________________________________
 
 
 spheader
 
-if (a1==a2) | (min(a1,a2)<X) | (max(a1,a2)>Z)
+if (a1==a2) || (min(a1,a2)<X) || (max(a1,a2)>Z)
 	error(' Error in FRAMEP: illegal axis ')
 end
 

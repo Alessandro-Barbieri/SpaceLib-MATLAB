@@ -8,14 +8,14 @@
 % problem of a two-link system floating in the 3-D space. The program predicts the trajectory
 % of the system. This is an improved version of Test.m. The angular moment of the system should
 % be constant, but inaccuracy in the integration method corrupt it. In this version, some
-% statments have been added to preserve the total angular momentum obtaining an improved final
+% statements have been added to preserve the total angular momentum obtaining an improved final
 % accuracy. At each integration step the angular momentum is evaluated and a velocity dW is
 % added to the system in order to set the value of the angular momentum equal to its initial
 % value (G=Go for t==0.) The program reads from a file (TEST.DAT) the links description (mass,
 % inertias, the coordinates of the centre of mass) and from another file (TEST.MOT) the motion
 % of the motors, and prints on the screen the trajectory of the two links.
 %
-% (c) G.Legnani and C.Moiola 1998 adapted from G.Legnani and R.Faglia 1990
+% © G.Legnani and C.Moiola 1998 adapted from G.Legnani and R.Faglia 1990
 %_____________________________________________________________________________________________
 
 spheader
@@ -28,17 +28,17 @@ var=[1 1 1 1 1 1 ;
 Wp=NULL4;
 W0=NULL4;
                                                     % Open description file
-fil=fopen([spc_lib_dir_b,'\test.dat'],'r');
+fil=fopen([spc_lib_dir_b,filesep,'TEST.DAT'],'r');
 if (fil==-1)
         error('Error on input file TEST.DAT ')
 end
 out=input('output to screen? (1=yes)');
 if (out~=1)
-   outfile=[spc_lib_dir_b,'\testout.out'];
+   outfile=[spc_lib_dir_b,filesep,'TESTOUT.OUT'];
    out=fopen(outfile,'wt');
 end;
 if (out==-1)
-        error('Error in TEST.M: Unable to open otput file ')
+        error('Error in TEST.M: Unable to open output file ')
 end
                                                     % Read description of the links step(1)
 m=  fscanf(fil,'%f',1);
@@ -59,12 +59,12 @@ W1=W1';
 m1= fscanf(fil,'%f',[4 4]);                         % Read position matrix of link 1
 m1=m1';
                                                     % Open motion file
-fil=fopen([spc_lib_dir_b,'\test.mot'],'r');
+fil=fopen([spc_lib_dir_b,filesep,'TEST.MOT'],'r');
 if (fil==-1)
         error('Error on motion file TEST.MOT ')
 end
 dt=fscanf(fil,'%f',1);                              % Read integration step "dt"
-for t=0:dt:(~feof(fil))                             % Loop for each istant of time step(2)
+for t=0:dt:(~feof(fil))                             % Loop for each instant of time step(2)
         q  =fscanf(fil,'%f',1);                     % Read motion of motor (a)
         qp =fscanf(fil,'%f',1);
         [qpp,count]=fscanf(fil,'%f',1);
@@ -75,16 +75,16 @@ for t=0:dt:(~feof(fil))                             % Loop for each istant of ti
         m12=screwtom(Zax,q,O,0);                    % Relative position of link 1 & 2 (b)
         m2=m1*m12;                                  % Absolute position of link 2     (c)
                                                     % step (d) moved forward
-        [W12,H12]= vactowh2(Rev,Z,qp,qpp);          % Rel. vel & acc. of link 1&2 (e)
+        [W12,H12]= vactowh2(Rev,Z,qp,qpp);          % Relative velocity & acceleration of link 1&2 (e)
         W12O=mami(W12,m1);                          % (f)
         H12O=mami(H12,m1);
-        W12O(1:3,1:3)=normskew(W12O(1:3,1:3),SKEW_);% normalization reducing num. error
+        W12O(1:3,1:3)=normskew(W12O(1:3,1:3),SKEW_);% normalization reducing numerical error
         W2=W1+W12O;                                 % Absolute velocity  of link 2 (g1)
                                             % evaluation of partial acceleration moved forward
         J1O=mamt(J1,m1);                            % Refer inertia moments to absolute frame
         J2O=mamt(J2,m2);
-        J1O=normskew(J1O,SYMM_);                    % normalization reducing num. error
-        J2O=normskew(J2O,SYMM_);                    % normalization reducing num. error
+        J1O=normskew(J1O,SYMM_);                    % normalization reducing numerical error
+        J2O=normskew(J2O,SYMM_);                    % normalization reducing numerical error
         Jtot=J1O+J2O;                               % Total inertia (i)
 %---- preserve total angular momentum
                 G1=skew(W1,J1);
@@ -96,7 +96,7 @@ for t=0:dt:(~feof(fil))                             % Loop for each istant of ti
                 W2=W2-dW;
 %----
                 H1=W1^2;                            % Partial acceleration of link 1 (d)
-        H2=coriolis(H1,H12O,W1,W12O);               % Partial acc. of link 2 (g2)
+        H2=coriolis(H1,H12O,W1,W12O);               % Partial acceleration of link 2 (g2)
         F1=skew(H1,J1O);                            % Evaluate inertia actions (j)
         F2=skew(H2,J2O);
         F=F1+F2;

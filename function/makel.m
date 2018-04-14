@@ -3,7 +3,7 @@ function L=makel(type,u,pitch,P)
 
 %MAKEL (Spacelib): Builds a L matrix.
 %
-% This  function   builds a L matrix  describing a rotation  or a traslation  
+% This  function   builds a L matrix  describing a rotation  or a translation  
 % about an  axis  which  passes  through   the   point   P  and  whose  unit 
 % vector is u.
 % Input parameters:
@@ -15,14 +15,14 @@ function L=makel(type,u,pitch,P)
 %   ignored.
 %
 % Output parameters:
-% - L : 4*4 matrix
+% - L : 4×4 matrix
 %
 % Usage:
 %
 % 			L=makel(type,u,pitch,P)
 %
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Adamini 1993
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Adamini 1993
 % patched by G. Legnani November 2001
 %___________________________________________________________________________
 
@@ -53,7 +53,7 @@ elseif (type==Rev)
 
 	v=cross(u,P(1:3));
 	
-	if (v==[]) 
+	if isequal(v,[]) 
 		v=[ 0 0 0]; 
 	end
 	

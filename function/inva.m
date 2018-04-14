@@ -19,8 +19,8 @@ function [Ai,test]=inva(alpha,beta,sig,i,j,k)
 % Usage:
 %			[Ai,test]=inva(alpha,beta,sig,i,j,k)
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: AMADORI,GHISLOTTI, PUGLIESE 1997
-% bug fixed january 2003 (g.legnani) for compatibility with new matlab release
+% © G.Legnani, C. Moiola 1998; adapted from: AMADORI,GHISLOTTI, PUGLIESE 1997
+% bug fixed January 2003 (g.legnani) for compatibility with new MATLAB release
 %___________________________________________________________________________
 
 
@@ -29,7 +29,7 @@ spheader
 sa=sin(alpha);		ca=cos(alpha);	
 sb=sin(beta);		cb=cos(beta);
 
-if ( ((i~=k)&(cb==0)) | ((i==k)&(sb==0)) ) % There is a singularity %bug fixed jan 2003
+if ( ((i~=k)&&(cb==0)) || ((i==k)&&(sb==0)) ) % There is a singularity %bug fixed jan 2003
 	test=NOTOK
 	fprintf(1,'Warning: singular position ');
 	% return

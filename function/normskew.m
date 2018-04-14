@@ -12,12 +12,12 @@ function A=normskew(M,ssign)
 % 
 %                       M=normskew(A,sign)
 %
-% (c) G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
+% © G.Legnani, C. Moiola 1998; adapted from: G.Legnani and R.Faglia 1990
 %___________________________________________________________________________
 
 spheader
 
-if ( (ssign~=SYMM_) & (ssign~=SKEW_) )
+if ( (ssign~=SYMM_) && (ssign~=SKEW_) )
 	error(' Error in NORMSKEW: Illegal value of ssign ')
 end
 % Makes simmetric/antisimmetric a matrix
