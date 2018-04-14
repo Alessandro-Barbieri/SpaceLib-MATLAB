@@ -2,7 +2,7 @@
 %
 % Vengono generati dei parametri random da introdurre nelle funzioni per testarle.
 % Questo viene fatto per le funzioni che hanno anche la funzione inversa. 
-% Applicando in sequenza, la funzione e la sua inversa, bisognerà ritrovare 
+% Applicando in sequenza, la funzione e la sua inversa, bisognerà  ritrovare 
 % ( a meno di una prefissata tolleranza) i parametri di partenza 
 %
 % patched by G. Legnani November 2001
@@ -304,7 +304,7 @@ if (t==3)
 	M=cardatom(q,i,j,k,O); 
 	W=cardatow(q,qqp,i,j,k,O);
 	H=cardatoh(q,qqp,qpp,i,j,k,O);
-        fprintf(out,'\nTest n�:%d\n',contatore)
+        fprintf(out,'\nTest nø:%d\n',contatore)
         fprintf(out,'The input parameters are:')
         fprintm(out,'q   = ',q)
         fprintm(out,'qp  = ',qqp)
