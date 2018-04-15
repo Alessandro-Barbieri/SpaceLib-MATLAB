@@ -68,7 +68,7 @@ for i=1:1:k
 	if (i==1) 
 		rmin=epsil*arm*imax;
 	end
-	if (rm==0 | arm<rmin ) 
+	if (rm==0 || arm<rmin ) 
 		return
 	end
 	irank=i;
