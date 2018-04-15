@@ -1,4 +1,4 @@
-﻿
+
 function [u,phi,p,h]= mtoscrew(m)
 
 %MTOSCREW (Spacelib): Extracts from a matrix the parameters of the screw displacement
